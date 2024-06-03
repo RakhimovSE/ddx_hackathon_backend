@@ -5,13 +5,21 @@ import (
 	"log"
 	"os"
 
-	"ddx_hackathon_backend/models"
-
 	"github.com/jinzhu/gorm"
 	_ "github.com/jinzhu/gorm/dialects/postgres"
+	"github.com/joho/godotenv"
+
+	"ddx_hackathon_backend/models"
 )
 
-func SetupDatabase() *gorm.DB {
+var DB *gorm.DB
+
+func InitDatabase() {
+	err := godotenv.Load()
+	if err != nil {
+		log.Fatalf("Error loading .env file")
+	}
+
 	dbHost := os.Getenv("DB_HOST")
 	dbPort := os.Getenv("DB_PORT")
 	dbUser := os.Getenv("DB_USER")
@@ -22,12 +30,10 @@ func SetupDatabase() *gorm.DB {
 	dsn := fmt.Sprintf("host=%s port=%s user=%s dbname=%s sslmode=%s password=%s",
 		dbHost, dbPort, dbUser, dbName, dbSslMode, dbPassword)
 
-	db, err := gorm.Open("postgres", dsn)
+	DB, err = gorm.Open("postgres", dsn)
 	if err != nil {
-		log.Fatalf("Не удалось подключиться к базе данных: %v", err)
+		log.Fatalf("Failed to connect to database: %v", err)
 	}
 
-	db.AutoMigrate(&models.User{}, &models.TrainingPlan{})
-
-	return db
+	DB.AutoMigrate(&models.User{}, &models.TrainingPlan{}, &models.Exercise{}, &models.ExercisePhoto{})
 }
