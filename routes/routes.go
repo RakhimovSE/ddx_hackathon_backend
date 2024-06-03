@@ -8,6 +8,8 @@ import (
 )
 
 func SetupRoutes(router *gin.Engine, db *gorm.DB) {
+	router.Static("/static", "./static")
+	
 	router.GET("/users", func(c *gin.Context) {
 		handlers.GetUsers(c, db)
 	})
