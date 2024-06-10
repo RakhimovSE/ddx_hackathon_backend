@@ -8,49 +8,18 @@ import (
 	"strconv"
 	"testing"
 
-	"github.com/gin-gonic/gin"
-	"github.com/jinzhu/gorm"
 	_ "github.com/jinzhu/gorm/dialects/sqlite"
 	"github.com/stretchr/testify/assert"
 	"golang.org/x/crypto/bcrypt"
 
-	"ddx_hackathon_backend/handlers"
 	"ddx_hackathon_backend/models"
 )
 
-// Mock database
-func setupTestDB() *gorm.DB {
-	db, err := gorm.Open("sqlite3", ":memory:")
-	if err != nil {
-		panic("failed to connect database")
-	}
-	db.AutoMigrate(&models.User{})
-	return db
-}
-
-// Mock router
-func setupRouter(db *gorm.DB) *gin.Engine {
-	router := gin.Default()
-	router.GET("/users", func(c *gin.Context) {
-		handlers.GetUsers(c, db)
-	})
-	router.POST("/users", func(c *gin.Context) {
-		handlers.CreateUser(c, db)
-	})
-	router.DELETE("/users/:id", func(c *gin.Context) {
-		handlers.DeleteUser(c, db)
-	})
-	router.PATCH("/users/:id", func(c *gin.Context) {
-		handlers.UpdateUser(c, db)
-	})
-	return router
-}
-
 func TestGetUsers(t *testing.T) {
-	db := setupTestDB()
+	db := SetupTestDB()
 	defer db.Close()
 
-	router := setupRouter(db)
+	router := SetupRouter(db)
 
 	// Create a user for testing
 	db.Create(&models.User{Name: "John Doe", Email: "john.doe@example.com", Password: "password"})
@@ -64,10 +33,10 @@ func TestGetUsers(t *testing.T) {
 }
 
 func TestCreateUser(t *testing.T) {
-	db := setupTestDB()
+	db := SetupTestDB()
 	defer db.Close()
 
-	router := setupRouter(db)
+	router := SetupRouter(db)
 
 	user := models.User{Name: "Jane Doe", Email: "jane.doe@example.com", Password: "password"}
 	jsonValue, _ := json.Marshal(user)
@@ -85,10 +54,10 @@ func TestCreateUser(t *testing.T) {
 }
 
 func TestDeleteUser(t *testing.T) {
-	db := setupTestDB()
+	db := SetupTestDB()
 	defer db.Close()
 
-	router := setupRouter(db)
+	router := SetupRouter(db)
 
 	// Create a user for testing
 	user := models.User{Name: "John Doe", Email: "john.doe@example.com", Password: "password"}
@@ -106,10 +75,10 @@ func TestDeleteUser(t *testing.T) {
 }
 
 func TestUpdateUser(t *testing.T) {
-	db := setupTestDB()
+	db := SetupTestDB()
 	defer db.Close()
 
-	router := setupRouter(db)
+	router := SetupRouter(db)
 
 	// Create a user for testing
 	user := models.User{Name: "John Doe", Email: "john.doe@example.com", Password: "password"}
