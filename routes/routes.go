@@ -7,7 +7,8 @@ import (
 	"github.com/jinzhu/gorm"
 )
 
-func SetupRoutes(router *gin.Engine, db *gorm.DB) {
+func SetupRouter(db *gorm.DB) *gin.Engine {
+	router := gin.Default()
 	router.Static("/static", "./static")
 
 	router.GET("/users", func(c *gin.Context) {
@@ -46,4 +47,6 @@ func SetupRoutes(router *gin.Engine, db *gorm.DB) {
 	router.GET("/exercises", func(c *gin.Context) {
 		handlers.GetExercises(c, db)
 	})
+
+	return router
 }

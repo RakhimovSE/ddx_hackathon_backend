@@ -13,13 +13,14 @@ import (
 	"golang.org/x/crypto/bcrypt"
 
 	"ddx_hackathon_backend/models"
+	"ddx_hackathon_backend/routes"
 )
 
 func TestGetUsers(t *testing.T) {
 	db := SetupTestDB()
 	defer db.Close()
 
-	router := SetupRouter(db)
+	router := routes.SetupRouter(db)
 
 	// Create a user for testing
 	db.Create(&models.User{Name: "John Doe", Email: "john.doe@example.com", Password: "password"})
@@ -36,7 +37,7 @@ func TestCreateUser(t *testing.T) {
 	db := SetupTestDB()
 	defer db.Close()
 
-	router := SetupRouter(db)
+	router := routes.SetupRouter(db)
 
 	user := models.User{Name: "Jane Doe", Email: "jane.doe@example.com", Password: "password"}
 	jsonValue, _ := json.Marshal(user)
@@ -57,7 +58,7 @@ func TestDeleteUser(t *testing.T) {
 	db := SetupTestDB()
 	defer db.Close()
 
-	router := SetupRouter(db)
+	router := routes.SetupRouter(db)
 
 	// Create a user for testing
 	user := models.User{Name: "John Doe", Email: "john.doe@example.com", Password: "password"}
@@ -78,7 +79,7 @@ func TestUpdateUser(t *testing.T) {
 	db := SetupTestDB()
 	defer db.Close()
 
-	router := SetupRouter(db)
+	router := routes.SetupRouter(db)
 
 	// Create a user for testing
 	user := models.User{Name: "John Doe", Email: "john.doe@example.com", Password: "password"}

@@ -8,7 +8,6 @@ import (
 	"ddx_hackathon_backend/routes"
 	"ddx_hackathon_backend/scripts"
 
-	"github.com/gin-gonic/gin"
 	"github.com/joho/godotenv"
 )
 
@@ -18,17 +17,15 @@ func main() {
 		log.Fatalf("Error loading .env file")
 	}
 
-	database.InitDatabase()
-	defer database.DB.Close()
+	db := database.SetupDB()
+	defer db.Close()
 
 	// Check if the argument is "load_data"
 	if len(os.Args) > 1 && os.Args[1] == "load_data" {
-		scripts.LoadDataFromFile(database.DB)
+		scripts.LoadDataFromFile(db)
 		return
 	}
 
-	router := gin.Default()
-	routes.SetupRoutes(router, database.DB)
-
+	router := routes.SetupRouter(db)
 	router.Run(":8080")
 }
