@@ -1,10 +1,12 @@
 package models
 
-import "github.com/jinzhu/gorm"
+import (
+	"github.com/jinzhu/gorm"
+)
 
 type TrainingPlan struct {
-    gorm.Model
-    Title    string `json:"title"`
-    Content  string `json:"content"`
-    User     User   `gorm:"foreignkey:UserID"`
+	gorm.Model
+	Name        string    `json:"name"`
+	Description string    `json:"description"`
+	Workouts    []Workout `gorm:"foreignkey:TrainingPlanID"`
 }

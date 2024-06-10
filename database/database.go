@@ -35,5 +35,13 @@ func InitDatabase() {
 		log.Fatalf("Failed to connect to database: %v", err)
 	}
 
-	DB.AutoMigrate(&models.User{}, &models.TrainingPlan{}, &models.Exercise{}, &models.ExercisePhoto{})
+	DB.AutoMigrate(
+		&models.User{},
+		&models.TrainingPlan{},
+		&models.Workout{},
+		&models.WorkoutExercise{},
+		&models.ExerciseSet{},
+		&models.Exercise{},
+		&models.ExercisePhoto{},
+	)
 }

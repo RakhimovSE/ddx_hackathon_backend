@@ -11,11 +11,9 @@ import (
 )
 
 func GetExercises(c *gin.Context, db *gorm.DB) {
-	// Получить параметры offset и limit из запроса
 	offsetParam := c.DefaultQuery("offset", "0")
 	limitParam := c.DefaultQuery("limit", "20")
 
-	// Преобразовать параметры в целые числа
 	offset, err := strconv.Atoi(offsetParam)
 	if err != nil {
 		c.JSON(http.StatusBadRequest, gin.H{"error": "Invalid offset parameter"})

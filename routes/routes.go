@@ -9,7 +9,7 @@ import (
 
 func SetupRoutes(router *gin.Engine, db *gorm.DB) {
 	router.Static("/static", "./static")
-	
+
 	router.GET("/users", func(c *gin.Context) {
 		handlers.GetUsers(c, db)
 	})
@@ -33,6 +33,12 @@ func SetupRoutes(router *gin.Engine, db *gorm.DB) {
 	})
 	router.PATCH("/training_plans/:id", func(c *gin.Context) {
 		handlers.UpdateTrainingPlan(c, db)
+	})
+	router.GET("/workouts", func(c *gin.Context) {
+		handlers.GetWorkouts(c, db)
+	})
+	router.POST("/workouts", func(c *gin.Context) {
+		handlers.CreateWorkout(c, db)
 	})
 	router.POST("/login", func(c *gin.Context) {
 		handlers.LoginUser(c, db)
