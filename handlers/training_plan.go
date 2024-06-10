@@ -48,11 +48,13 @@ func UpdateTrainingPlan(c *gin.Context, db *gorm.DB) {
 	if err := db.Where("id = ?", id).First(&plan).Error; err != nil {
 		c.AbortWithStatus(http.StatusNotFound)
 	} else {
-		if err := c.ShouldBindJSON(&plan); err != nil {
-			c.JSON(http.StatusBadRequest, gin.H{"error": err.Error()})
-			return
-		}
+		var updatedPlan models.TrainingPlan
+		c.BindJSON(&updatedPlan)
+
+		plan.Name = updatedPlan.Name
+		plan.Description = updatedPlan.Description
 		db.Save(&plan)
+
 		c.JSON(http.StatusOK, plan)
 	}
 }
