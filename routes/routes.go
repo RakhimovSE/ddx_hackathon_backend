@@ -37,4 +37,7 @@ func SetupRoutes(router *gin.Engine, db *gorm.DB) {
 	router.POST("/login", func(c *gin.Context) {
 		handlers.LoginUser(c, db)
 	})
+	router.GET("/exercises", func(c *gin.Context) {
+		handlers.GetExercises(c, db)
+	})
 }
