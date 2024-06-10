@@ -85,13 +85,39 @@ func DeleteUser(c *gin.Context, db *gorm.DB) {
 }
 
 func UpdateUser(c *gin.Context, db *gorm.DB) {
-    id := c.Params.ByName("id")
-    var user models.User
-    if err := db.Where("id = ?", id).First(&user).Error; err != nil {
-        c.AbortWithStatus(http.StatusNotFound)
-    } else {
-        c.BindJSON(&user)
-        db.Save(&user)
-        c.JSON(http.StatusOK, user)
-    }
+	id := c.Param("id")
+	var input models.User
+	if err := c.ShouldBindJSON(&input); err != nil {
+		c.JSON(http.StatusBadRequest, gin.H{"error": err.Error()})
+		return
+	}
+
+	var user models.User
+	if err := db.Where("id = ?", id).First(&user).Error; err != nil {
+		c.JSON(http.StatusInternalServerError, gin.H{"error": "User not found"})
+		return
+	}
+
+	if input.Name != "" {
+		user.Name = input.Name
+	}
+	if input.Email != "" {
+		user.Email = input.Email
+	}
+	if input.Password != "" {
+		hashedPassword, err := bcrypt.GenerateFromPassword([]byte(input.Password), bcrypt.DefaultCost)
+		if err != nil {
+			c.JSON(http.StatusInternalServerError, gin.H{"error": "Failed to hash password"})
+			return
+		}
+		user.Password = string(hashedPassword)
+	}
+    user.AvatarUrl = input.AvatarUrl
+
+	if err := db.Save(&user).Error; err != nil {
+		c.JSON(http.StatusInternalServerError, gin.H{"error": "Failed to update user"})
+		return
+	}
+
+	c.JSON(http.StatusOK, user)
 }
