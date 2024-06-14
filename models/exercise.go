@@ -6,11 +6,13 @@ import (
 
 type Exercise struct {
 	gorm.Model
-	Name             string             `json:"name"`
-	Muscle           Muscle             `json:"muscle"`
-	AdditionalMuscle Muscle             `json:"additional_muscle"`
-	Type             ExerciseType       `json:"type"`
-	Equipment        Equipment          `json:"equipment"`
-	Difficulty       Difficulty         `json:"difficulty"`
-	Photos           []ExercisePhoto    `json:"photos" gorm:"foreignkey:ExerciseID"`
+	Name             string          `json:"name"`
+	Muscles          []Muscle        `gorm:"many2many:exercise_muscles;"`
+	AdditionalMuscles []Muscle       `gorm:"many2many:exercise_additional_muscles;"`
+	TypeID           uint            `json:"type_id"`
+	Type             ExerciseType    `json:"type"`
+	Equipments       []Equipment     `gorm:"many2many:exercise_equipments;"`
+	DifficultyID     uint            `json:"difficulty_id"`
+	Difficulty       Difficulty      `json:"difficulty"`
+	Photos           []ExercisePhoto `json:"photos" gorm:"foreignkey:ExerciseID"`
 }
