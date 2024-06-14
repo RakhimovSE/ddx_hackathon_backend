@@ -26,7 +26,15 @@ func GetExercises(c *gin.Context, db *gorm.DB) {
 	}
 
 	var exercises []models.Exercise
-	if err := db.Preload("Photos").Offset(offset).Limit(limit).Find(&exercises).Error; err != nil {
+	if err := db.Preload("Photos").
+		Preload("Muscles").
+		Preload("AdditionalMuscles").
+		Preload("Equipments").
+		Preload("Type").
+		Preload("Difficulty").
+		Offset(offset).
+		Limit(limit).
+		Find(&exercises).Error; err != nil {
 		c.JSON(http.StatusInternalServerError, gin.H{"error": "Failed to fetch exercises"})
 		return
 	}
