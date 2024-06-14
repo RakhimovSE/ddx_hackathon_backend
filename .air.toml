@@ -1,0 +1,30 @@
+# .air.toml
+root = "."
+tmp_dir = "tmp"
+[build]
+  bin = "tmp/main"
+  cmd = "go build -o ./tmp/main ."
+  include_ext = ["go", "tmpl", "html"]
+  exclude_dir = ["assets", "tmp", "scripts/data"]
+  exclude_file = ["*.md"]
+  follow_symlink = true
+  full_build = false
+  log = "debug"
+  color = "nocolor"
+  [build.exclude]
+    glob = ["*_test.go"]
+  [build.cmd_env]
+    GIN_MODE = "debug"
+
+[run]
+  cmd = "sh -c './tmp/main'"
+  watch_dir = "."
+  include_ext = ["go", "tmpl", "html"]
+  exclude_dir = ["assets", "tmp", "scripts/data"]
+  exclude_file = ["*.md"]
+  follow_symlink = true
+  [run.log]
+    color = "nocolor"
+    [run.env]
+      PORT = "8080"
+      GIN_MODE = "debug"
