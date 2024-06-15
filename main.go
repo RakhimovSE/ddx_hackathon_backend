@@ -20,10 +20,15 @@ func main() {
 	db := database.SetupDB()
 	defer db.Close()
 
-	// Check if the argument is "load_data"
-	if len(os.Args) > 1 && os.Args[1] == "load_data" {
-		scripts.LoadDataFromFile(db)
-		return
+	if len(os.Args) == 2 {
+		switch (os.Args[1]) {
+			case "seed_trainers":
+				scripts.SeedTrainers(db)
+				return
+			case "load_data":
+				scripts.LoadDataFromFile(db)
+				return
+			}
 	}
 
 	router := routes.SetupRouter(db)
