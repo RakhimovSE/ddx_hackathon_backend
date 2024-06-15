@@ -47,6 +47,15 @@ func SetupRouter(db *gorm.DB) *gin.Engine {
 	router.GET("/exercises", func(c *gin.Context) {
 		handlers.GetExercises(c, db)
 	})
+	router.POST("/exercises", func(c *gin.Context) {
+		handlers.CreateExercise(c, db)
+	})
+	router.DELETE("/exercises/:id", func(c *gin.Context) {
+		handlers.DeleteExercise(c, db)
+	})
+	router.PATCH("/exercises/:id", func(c *gin.Context) {
+		handlers.UpdateExercise(c, db)
+	})
 
 	return router
 }
