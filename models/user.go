@@ -14,6 +14,4 @@ type User struct {
     TrainerProfile  *TrainerProfile `json:"trainerProfile,omitempty"`
     ReviewsReceived []Review        `json:"reviewsReceived,omitempty" gorm:"foreignkey:TrainerID"`
     ReviewsGiven    []Review        `json:"reviewsGiven,omitempty" gorm:"foreignkey:ClientID"`
-    Trainers        []User          `gorm:"many2many:client_trainers;association_jointable_foreignkey:trainer_id;foreignkey:client_id;" json:"trainers"`
-    Clients         []User          `gorm:"many2many:client_trainers;association_jointable_foreignkey:client_id;foreignkey:trainer_id;" json:"clients"`
 }

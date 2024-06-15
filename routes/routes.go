@@ -32,6 +32,9 @@ func SetupRouter(db *gorm.DB) *gin.Engine {
 	router.DELETE("/clients/:client_id/trainers/:trainer_id", func(c *gin.Context) {
 		handlers.DeleteClientTrainer(c, db)
 	})
+	router.GET("/trainers", func(c *gin.Context) {
+		handlers.GetTrainers(c, db)
+	})
 	router.GET("/training_plans", func(c *gin.Context) {
 		handlers.GetTrainingPlans(c, db)
 	})
