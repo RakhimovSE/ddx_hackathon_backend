@@ -19,5 +19,8 @@ func MigrateDB(db *gorm.DB) {
 		&models.Equipment{},
 		&models.ExerciseType{},
 		&models.Difficulty{},
+		&models.TrainerProfile{},
+		&models.Review{},
+		&models.Specialty{},
 	)
 }
