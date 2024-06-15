@@ -31,4 +31,6 @@ func MigrateDB(db *gorm.DB) {
 
 	db.Model(&models.ClientTrainer{}).AddForeignKey("client_id", "users(id)", "CASCADE", "CASCADE")
 	db.Model(&models.ClientTrainer{}).AddForeignKey("trainer_id", "users(id)", "CASCADE", "CASCADE")
+
+	db.Model(&models.Exercise{}).AddForeignKey("created_by_id", "users(id)", "SET NULL", "CASCADE")
 }

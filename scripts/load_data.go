@@ -46,9 +46,11 @@ func LoadDataFromFile(db *gorm.DB) {
 
 		// Create Exercise
 		ex := models.Exercise{
-			Name:         exercise.Name,
-			Type:         exType,
-			Difficulty:   difficulty,
+			Name:        exercise.Name,
+			Type:        exType,
+			Difficulty:  difficulty,
+			SourceType:  "catalog",
+			CreatedByID: nil, // Since these exercises are from catalog, they are not user-created
 		}
 		db.Create(&ex)
 
