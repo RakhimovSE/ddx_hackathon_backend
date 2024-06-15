@@ -21,14 +21,14 @@ func main() {
 	defer db.Close()
 
 	if len(os.Args) == 2 {
-		switch (os.Args[1]) {
-			case "seed_trainers":
-				scripts.SeedTrainers(db)
-				return
-			case "load_data":
-				scripts.LoadDataFromFile(db)
-				return
-			}
+		switch os.Args[1] {
+		case "seed_trainers":
+			scripts.SeedTrainers(db)
+			return
+		case "load_data":
+			scripts.LoadDataFromFile(db)
+			return
+		}
 	}
 
 	router := routes.SetupRouter(db)
