@@ -11,11 +11,23 @@ import (
 	"github.com/joho/godotenv"
 )
 
+func loadEnv() {
+  env := os.Getenv("GIN_MODE")
+  if env == "release" {
+    err := godotenv.Load(".env.release")
+    if err != nil {
+      log.Fatalf("Error loading .env.release file")
+    }
+  } else {
+    err := godotenv.Load(".env.debug")
+    if err != nil {
+      log.Fatalf("Error loading .env.debug file")
+    }
+  }
+}
+
 func main() {
-	err := godotenv.Load()
-	if err != nil {
-		log.Fatalf("Error loading .env file")
-	}
+	loadEnv()
 
 	db := database.SetupDB()
 	defer db.Close()
@@ -32,5 +44,5 @@ func main() {
 	}
 
 	router := routes.SetupRouter(db)
-	router.Run(":8080")
+	router.Run(":" + os.Getenv("APP_PORT"))
 }

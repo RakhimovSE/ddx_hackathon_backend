@@ -35,7 +35,10 @@ test/
 # Compiled binary files
 **/__debug_bin*
 
-# Environment variables
-.env
+# Ignore all env files
+.env*
+# Except example env files
+!.env*.example
+
 
 tmp/
