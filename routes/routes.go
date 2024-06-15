@@ -23,6 +23,15 @@ func SetupRouter(db *gorm.DB) *gin.Engine {
 	router.PATCH("/users/:id", func(c *gin.Context) {
 		handlers.UpdateUser(c, db)
 	})
+	router.GET("/clients/:client_id/trainers", func(c *gin.Context) {
+		handlers.GetTrainersForClient(c, db)
+	})
+	router.POST("/clients/:client_id/trainers", func(c *gin.Context) {
+		handlers.AddClientTrainer(c, db)
+	})
+	router.DELETE("/clients/:client_id/trainers/:trainer_id", func(c *gin.Context) {
+		handlers.DeleteClientTrainer(c, db)
+	})
 	router.GET("/training_plans", func(c *gin.Context) {
 		handlers.GetTrainingPlans(c, db)
 	})
@@ -55,12 +64,6 @@ func SetupRouter(db *gorm.DB) *gin.Engine {
 	})
 	router.PATCH("/exercises/:id", func(c *gin.Context) {
 		handlers.UpdateExercise(c, db)
-	})
-	router.POST("/client-trainer", func(c *gin.Context) {
-		handlers.AddClientTrainer(c, db)
-	})
-	router.DELETE("/client-trainer", func(c *gin.Context) {
-		handlers.DeleteClientTrainer(c, db)
 	})
 
 	return router
