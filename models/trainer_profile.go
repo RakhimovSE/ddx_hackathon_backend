@@ -8,5 +8,4 @@ type TrainerProfile struct {
     Experience  int        `json:"experience"`
     Bio         string     `json:"bio"`
     Specialties []Specialty `gorm:"many2many:trainer_specialties;" json:"specialties"`
-    User        User       `json:"user"`
 }

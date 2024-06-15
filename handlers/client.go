@@ -68,7 +68,8 @@ func GetTrainersForClient(c *gin.Context, db *gorm.DB) {
 	clientID := c.Param("client_id")
 
 	var trainers []models.User
-	if err := db.Joins("JOIN client_trainers ON client_trainers.trainer_id = users.id").
+	if err := db.Preload("TrainerProfile.Specialties").
+		Joins("JOIN client_trainers ON client_trainers.trainer_id = users.id").
 		Where("client_trainers.client_id = ? AND client_trainers.deleted_at IS NULL", clientID).
 		Where("users.role = ?", "trainer").
 		Find(&trainers).Error; err != nil {
