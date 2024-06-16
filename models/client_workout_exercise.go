@@ -12,6 +12,7 @@ type ClientWorkoutExercise struct {
     WorkoutExerciseID  uint                  `json:"workout_exercise_id"`
     WorkoutExercise    WorkoutExercise       `json:"workout_exercise"`
     Sets               []ClientExerciseSet   `gorm:"foreignkey:ClientWorkoutExerciseID"`
+    RestTime           int                   `json:"rest_time"`
     Order              int                   `json:"order"`
     StartDate          *time.Time            `json:"start_date"`
     EndDate            *time.Time            `json:"end_date"`
