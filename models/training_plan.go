@@ -9,4 +9,6 @@ type TrainingPlan struct {
 	Name        string    `json:"name"`
 	Description string    `json:"description"`
 	Workouts    []Workout `gorm:"foreignkey:TrainingPlanID"`
+	CreatedByID *uint     `json:"created_by_id"`
+	CreatedBy   *User     `json:"created_by"`
 }
