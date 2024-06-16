@@ -10,4 +10,5 @@ type ExerciseSet struct {
 	Reps              int    `json:"reps"`
 	Duration          int    `json:"duration"`
 	RestTime          int    `json:"rest_time"`
+	Order             int    `json:"order"`
 }

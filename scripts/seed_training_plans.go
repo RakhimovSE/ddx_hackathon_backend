@@ -69,6 +69,7 @@ func SeedTrainingPlans(db *gorm.DB) {
 					Name:           fmt.Sprintf("Тренировка #%d", k+1),
 					Description:    randomElement(rnd, workoutDescriptions),
 					DaysUntilNext:  rnd.Intn(4) + 1, // 1-3 days until next workout
+					Order:          k + 1, // Порядок тренировки в плане
 				}
 
 				if err := db.Create(&workout).Error; err != nil {
@@ -82,6 +83,7 @@ func SeedTrainingPlans(db *gorm.DB) {
 						WorkoutID:  workout.ID,
 						ExerciseID: exercise.ID,
 						RestTime:   60, // Default rest time between exercises
+						Order:      l + 1, // Порядок упражнения в тренировке
 					}
 
 					if err := db.Create(&workoutExercise).Error; err != nil {
@@ -93,6 +95,7 @@ func SeedTrainingPlans(db *gorm.DB) {
 						set := models.ExerciseSet{
 							WorkoutExerciseID: workoutExercise.ID,
 							RestTime:          30, // Default rest time between sets
+							Order:             m + 1, // Порядок подхода в упражнении
 						}
 
 						if rnd.Intn(2) == 0 {
