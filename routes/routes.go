@@ -21,6 +21,8 @@ func SetupRouter(db *gorm.DB) *gin.Engine {
 	setupWorkoutRoutes(router, db)
 	// Exercise routes
 	setupExerciseRoutes(router, db)
+	// Client workout routes
+	setupClientWorkoutRoutes(router, db)
 
 	return router
 }
