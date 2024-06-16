@@ -34,6 +34,10 @@ func main() {
 
 	if len(os.Args) == 2 {
 		switch os.Args[1] {
+		case "seed":
+			scripts.SeedTrainers(db)
+			scripts.SeedTrainingPlans(db)
+			return
 		case "seed_trainers":
 			scripts.SeedTrainers(db)
 			return
