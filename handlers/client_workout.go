@@ -43,3 +43,19 @@ func GetClientWorkouts(c *gin.Context, db *gorm.DB) {
 
 	c.JSON(http.StatusOK, workouts)
 }
+
+func GetWorkoutsByTrainingPlan(c *gin.Context, db *gorm.DB) {
+	trainingPlanID := c.Param("training_plan_id")
+
+	var workouts []models.ClientWorkout
+	query := db.Where("client_training_plan_id = ?", trainingPlanID).
+		Order("start_date").
+		Find(&workouts)
+
+	if query.Error != nil {
+		c.JSON(http.StatusInternalServerError, gin.H{"error": "Failed to fetch workouts"})
+		return
+	}
+
+	c.JSON(http.StatusOK, workouts)
+}
