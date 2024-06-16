@@ -38,6 +38,7 @@ func main() {
 			scripts.SeedTrainers(db)
 			scripts.SeedTrainingPlans(db)
 			scripts.SeedClientTrainers(db)
+			scripts.SeedClientTrainingPlans(db)
 			return
 		case "seed_trainers":
 			scripts.SeedTrainers(db)
@@ -47,6 +48,9 @@ func main() {
 			return
 		case "seed_client_trainers":
 			scripts.SeedClientTrainers(db)
+			return
+		case "seed_client_training_plans":
+			scripts.SeedClientTrainingPlans(db)
 			return
 		case "load_data":
 			scripts.LoadDataFromFile(db)
