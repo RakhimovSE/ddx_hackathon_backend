@@ -10,7 +10,6 @@ type ClientTrainingPlan struct {
     gorm.Model
     UserID             uint            `json:"user_id"`
     TrainingPlanID     uint            `json:"training_plan_id"`
-    TrainingPlan       TrainingPlan    `json:"training_plan"`
     Name               string          `json:"name"`
 	Description        string          `json:"description"`
     Workouts           []ClientWorkout `gorm:"foreignkey:ClientTrainingPlanID"`

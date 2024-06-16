@@ -17,4 +17,7 @@ func setupClientRoutes(router *gin.Engine, db *gorm.DB) {
 	router.DELETE("/clients/:client_id/trainers/:trainer_id", func(c *gin.Context) {
 		handlers.DeleteClientTrainer(c, db)
 	})
+	router.GET("/clients/:client_id/training_plans", func(c *gin.Context) {
+		handlers.GetClientTrainingPlans(c, db)
+	})
 }

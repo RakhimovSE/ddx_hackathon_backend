@@ -79,3 +79,15 @@ func GetTrainersForClient(c *gin.Context, db *gorm.DB) {
 
 	c.JSON(http.StatusOK, trainers)
 }
+
+func GetClientTrainingPlans(c *gin.Context, db *gorm.DB) {
+	clientID := c.Param("client_id")
+	
+	var clientTrainingPlans []models.ClientTrainingPlan
+	if err := db.Where("user_id = ? AND deleted_at IS NULL", clientID).Find(&clientTrainingPlans).Error; err != nil {
+			c.JSON(http.StatusInternalServerError, gin.H{"error": "Failed to fetch client training plans"})
+			return
+	}
+
+	c.JSON(http.StatusOK, clientTrainingPlans)
+}
