@@ -23,6 +23,10 @@ func MigrateDB(db *gorm.DB) {
 		&models.Review{},
 		&models.Specialty{},
 		&models.ClientTrainer{},
+		&models.ClientTrainingPlan{},
+		&models.ClientWorkout{},
+		&models.ClientWorkoutExercise{},
+		&models.ClientExerciseSet{},
 	)
 
 	db.Model(&models.TrainerProfile{}).AddForeignKey("user_id", "users(id)", "CASCADE", "CASCADE")
@@ -42,4 +46,12 @@ func MigrateDB(db *gorm.DB) {
 	db.Model(&models.WorkoutExercise{}).AddForeignKey("exercise_id", "exercises(id)", "CASCADE", "CASCADE")
 	db.Model(&models.Workout{}).AddForeignKey("training_plan_id", "training_plans(id)", "CASCADE", "CASCADE")
 	db.Model(&models.TrainingPlan{}).AddForeignKey("created_by_id", "users(id)", "CASCADE", "CASCADE")
+
+	db.Model(&models.ClientTrainingPlan{}).AddForeignKey("user_id", "users(id)", "CASCADE", "CASCADE")
+	db.Model(&models.ClientTrainingPlan{}).AddForeignKey("training_plan_id", "training_plans(id)", "CASCADE", "CASCADE")
+	db.Model(&models.ClientWorkout{}).AddForeignKey("client_training_plan_id", "client_training_plans(id)", "CASCADE", "CASCADE")
+	db.Model(&models.ClientWorkout{}).AddForeignKey("workout_id", "workouts(id)", "CASCADE", "CASCADE")
+	db.Model(&models.ClientWorkoutExercise{}).AddForeignKey("client_workout_id", "client_workouts(id)", "CASCADE", "CASCADE")
+	db.Model(&models.ClientWorkoutExercise{}).AddForeignKey("workout_exercise_id", "workout_exercises(id)", "CASCADE", "CASCADE")
+	db.Model(&models.ClientExerciseSet{}).AddForeignKey("client_workout_exercise_id", "client_workout_exercises(id)", "CASCADE", "CASCADE")
 }
