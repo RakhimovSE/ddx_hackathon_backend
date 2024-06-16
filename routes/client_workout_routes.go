@@ -14,7 +14,7 @@ func setupClientWorkoutRoutes(router *gin.Engine, db *gorm.DB) {
 	router.GET("/training_plans/:training_plan_id/workouts", func(c *gin.Context) {
 		handlers.GetWorkoutsByTrainingPlan(c, db)
 	})
-	router.GET("/client_workouts/:client_workout_id", func(c *gin.Context) {
+	router.GET("/client_workouts/:client_workout_id/exercises", func(c *gin.Context) {
 		handlers.GetClientWorkoutExercises(c, db)
 	})
 }
