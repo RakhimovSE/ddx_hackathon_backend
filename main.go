@@ -40,8 +40,8 @@ func main() {
 		case "seed":
 			scripts.SeedClients(db)
 			scripts.SeedTrainers(db)
-			scripts.SeedTrainingPlans(db)
 			scripts.SeedClientTrainers(db)
+			scripts.SeedTrainingPlans(db)
 			scripts.SeedClientTrainingPlans(db)
 			return
 		case "seed_clients":
@@ -50,11 +50,11 @@ func main() {
 		case "seed_trainers":
 			scripts.SeedTrainers(db)
 			return
-		case "seed_training_plans":
-			scripts.SeedTrainingPlans(db)
-			return
 		case "seed_client_trainers":
 			scripts.SeedClientTrainers(db)
+			return
+		case "seed_training_plans":
+			scripts.SeedTrainingPlans(db)
 			return
 		case "seed_client_training_plans":
 			scripts.SeedClientTrainingPlans(db)
