@@ -10,7 +10,7 @@ type User struct {
     Email           string          `json:"email" gorm:"unique"`
     Password        string          `json:"password"`
     AvatarUrl       *string         `json:"avatarUrl"`
-    Role            string          `json:"role" gorm:"default:'client'"`
+    Role            string          `json:"role" gorm:"default:'client'"` // 'client' or 'trainer'
     TrainerProfile  *TrainerProfile `json:"trainerProfile,omitempty"`
     ReviewsReceived []Review        `json:"reviewsReceived,omitempty" gorm:"foreignkey:TrainerID"`
     ReviewsGiven    []Review        `json:"reviewsGiven,omitempty" gorm:"foreignkey:ClientID"`
