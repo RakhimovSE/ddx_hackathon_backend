@@ -26,7 +26,7 @@ func SeedClientTrainers(db *gorm.DB) {
     }
 
     for _, client := range clients {
-        numTrainers := rnd.Intn(3) // 0, 1, or 2 trainers
+        numTrainers := rnd.Intn(2) + 1 // 1 or 2 trainers
         assignedTrainers := make(map[uint]struct{})
 
         for i := 0; i < numTrainers; i++ {
