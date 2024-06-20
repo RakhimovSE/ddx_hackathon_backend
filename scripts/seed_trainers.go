@@ -34,10 +34,6 @@ var trainerBios = []string{
 	"Я покажу вам, как добиться результата с удовольствием.",
 }
 
-func randomName(r *rand.Rand, firstNames []string, lastNames []string) string {
-	return randomElement(r, firstNames) + " " + randomElement(r, lastNames)
-}
-
 func randomSpecialties(db *gorm.DB, specialties []string, n int, rnd *rand.Rand) []models.Specialty {
 	rnd.Shuffle(len(specialties), func(i, j int) { 
 		specialties[i], specialties[j] = specialties[j], specialties[i] 
@@ -62,11 +58,14 @@ func SeedTrainers(db *gorm.DB) {
 			log.Fatalf("Failed to hash password: %v", err)
 		}
 
+		email := faker.Email()
+		avatarUrl := fmt.Sprintf("https://robohash.org/%s?set=set2", email)
 		trainer := models.User{
 			Name:      randomName(rnd, trainerFirstNames, trainerLastNames),
-			Email:     faker.Email(),
+			Email:     email,
 			Password:  string(hashedPassword),
 			Role:      "trainer",
+			AvatarUrl: &avatarUrl,
 			TrainerProfile: &models.TrainerProfile{
 				Specialties: randomSpecialties(db, specialties, rnd.Intn(3)+1, rnd),
 				Experience:  rnd.Intn(120), // Random experience between 0 and 120 months
