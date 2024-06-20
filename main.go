@@ -34,11 +34,18 @@ func main() {
 
 	if len(os.Args) == 2 {
 		switch os.Args[1] {
+		case "load_data":
+			scripts.LoadDataFromFile(db)
+			return
 		case "seed":
+			scripts.SeedClients(db)
 			scripts.SeedTrainers(db)
 			scripts.SeedTrainingPlans(db)
 			scripts.SeedClientTrainers(db)
 			scripts.SeedClientTrainingPlans(db)
+			return
+		case "seed_clients":
+			scripts.SeedClients(db)
 			return
 		case "seed_trainers":
 			scripts.SeedTrainers(db)
@@ -51,9 +58,6 @@ func main() {
 			return
 		case "seed_client_training_plans":
 			scripts.SeedClientTrainingPlans(db)
-			return
-		case "load_data":
-			scripts.LoadDataFromFile(db)
 			return
 		}
 	}
