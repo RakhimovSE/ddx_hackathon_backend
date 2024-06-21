@@ -58,5 +58,5 @@ func SeedClients(db *gorm.DB) {
 		}
 	}
 
-	fmt.Println("20 clients added successfully")
+	fmt.Println("50 clients added successfully")
 }
