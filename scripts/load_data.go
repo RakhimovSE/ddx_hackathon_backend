@@ -5,8 +5,10 @@ import (
 	"fmt"
 	"io"
 	"log"
+	"math/rand"
 	"os"
 	"strings"
+	"time"
 
 	"ddx_hackathon_backend/models"
 
@@ -35,6 +37,8 @@ func LoadDataFromFile(db *gorm.DB) {
 	var exercises []ExerciseData
 	json.Unmarshal(byteValue, &exercises)
 
+	rnd := rand.New(rand.NewSource(time.Now().UnixNano()))
+
 	for _, exercise := range exercises {
 		// Handle Exercise Type
 		var exType models.ExerciseType
@@ -44,11 +48,18 @@ func LoadDataFromFile(db *gorm.DB) {
 		var difficulty models.Difficulty
 		db.FirstOrCreate(&difficulty, models.Difficulty{Level: exercise.Difficulty})
 
+		// Determine Unit
+		unit := "reps"
+		if rnd.Float64() < 0.2 {
+			unit = "duration"
+		}
+
 		// Create Exercise
 		ex := models.Exercise{
 			Name:        exercise.Name,
 			Type:        exType,
 			Difficulty:  difficulty,
+			Unit:        unit,
 			SourceType:  "catalog",
 			CreatedByID: nil, // Since these exercises are from catalog, they are not user-created
 		}
