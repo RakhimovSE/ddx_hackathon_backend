@@ -6,6 +6,7 @@ import (
 	"math/rand"
 	"time"
 
+	"ddx_hackathon_backend/helpers"
 	"ddx_hackathon_backend/models"
 
 	"github.com/go-faker/faker/v4"
@@ -59,7 +60,7 @@ func SeedTrainers(db *gorm.DB) {
 		}
 
 		email := faker.Email()
-		avatarUrl := fmt.Sprintf("https://robohash.org/%s?set=set2", email)
+		avatarUrl := helpers.GenerateAvatarURL(email, "trainer")
 		trainer := models.User{
 			Name:      randomName(rnd, trainerFirstNames, trainerLastNames),
 			Email:     email,

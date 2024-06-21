@@ -7,6 +7,7 @@ import (
 	"github.com/jinzhu/gorm"
 	"golang.org/x/crypto/bcrypt"
 
+	"ddx_hackathon_backend/helpers"
 	"ddx_hackathon_backend/models"
 )
 
@@ -23,11 +24,14 @@ func CreateUser(c *gin.Context, db *gorm.DB) {
 		return
 	}
 
+	role := "client"
+	avatarUrl := helpers.GenerateAvatarURL(input.Email, role)
 	user := models.User{
 		Name:      input.Name,
 		Email:     input.Email,
 		Password:  string(hashedPassword),
-		AvatarUrl: input.AvatarUrl,
+		Role:      role,
+		AvatarUrl: &avatarUrl,
 	}
 
 	if err := db.Create(&user).Error; err != nil {
