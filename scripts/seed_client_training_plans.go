@@ -87,10 +87,10 @@ func SeedClientTrainingPlans(db *gorm.DB) {
 
 				for exerciseOrder, workoutExercise := range workoutExercises {
 					clientWorkoutExercise := models.ClientWorkoutExercise{
-						ClientWorkoutID:  clientWorkout.ID,
-						WorkoutExerciseID: workoutExercise.ID,
-						RestTime:         workoutExercise.RestTime,
-						Order:            exerciseOrder,
+						ClientWorkoutID:   clientWorkout.ID,
+						ExerciseID: 		   workoutExercise.ExerciseID,
+						RestTime:          workoutExercise.RestTime,
+						Order:             exerciseOrder,
 					}
 
 					if err := db.Create(&clientWorkoutExercise).Error; err != nil {

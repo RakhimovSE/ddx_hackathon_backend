@@ -53,7 +53,7 @@ func MigrateDB(db *gorm.DB) {
 		db.Model(&models.ClientWorkout{}).AddForeignKey("client_training_plan_id", "client_training_plans(id)", "CASCADE", "CASCADE")
 		db.Model(&models.ClientWorkout{}).AddForeignKey("workout_id", "workouts(id)", "CASCADE", "CASCADE")
 		db.Model(&models.ClientWorkoutExercise{}).AddForeignKey("client_workout_id", "client_workouts(id)", "CASCADE", "CASCADE")
-		db.Model(&models.ClientWorkoutExercise{}).AddForeignKey("workout_exercise_id", "workout_exercises(id)", "CASCADE", "CASCADE")
+		db.Model(&models.ClientWorkoutExercise{}).AddForeignKey("exercise_id", "exercises(id)", "CASCADE", "CASCADE")
 		db.Model(&models.ClientExerciseSet{}).AddForeignKey("client_workout_exercise_id", "client_workout_exercises(id)", "CASCADE", "CASCADE")
 
 		db.Model(&models.TrainerSpecialty{}).AddForeignKey("trainer_profile_id", "trainer_profiles(id)", "CASCADE", "CASCADE")
