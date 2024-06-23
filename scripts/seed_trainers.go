@@ -81,6 +81,9 @@ func SeedTrainers(db *gorm.DB) {
 		}
 
 		email := faker.Email()
+		if i == 0 {
+			email = "trainer@test.com"
+		}
 		avatarUrl := helpers.GenerateAvatarURL(email, "trainer")
 		trainer := models.User{
 			Name:      randomName(rnd, trainerFirstNames, trainerLastNames),

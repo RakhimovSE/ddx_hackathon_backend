@@ -44,6 +44,9 @@ func SeedClients(db *gorm.DB) {
 		}
 
 		email := faker.Email()
+		if i == 0 {
+			email = "client@test.com"
+		}
 		avatarUrl := helpers.GenerateAvatarURL(email, "client")
 		client := models.User{
 			Name:      randomName(rnd, clientFirstNames, clientLastNames),
