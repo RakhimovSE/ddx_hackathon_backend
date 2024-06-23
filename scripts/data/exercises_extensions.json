@@ -1,0 +1,1301 @@
+{
+  "«Велосипед»": { "unit": "duration", "needWeight": false },
+  "«Восьмерки» с гирей": { "unit": "reps", "needWeight": true },
+  "«Кошачья» растяжка": { "unit": "duration", "needWeight": false },
+  "«Мельница» с гирей (сложный уровень)": {
+    "unit": "reps",
+    "needWeight": true
+  },
+  "«Мельница» с двумя гирями": { "unit": "reps", "needWeight": true },
+  "«Мельница» с одной гирей": { "unit": "reps", "needWeight": true },
+  "«Ножницы»": { "unit": "reps", "needWeight": false },
+  "«Складной нож» в положении лежа на спине": {
+    "unit": "reps",
+    "needWeight": false
+  },
+  "«Складной нож» в положении на боку": { "unit": "reps", "needWeight": false },
+  "JM-жим": { "unit": "reps", "needWeight": true },
+  "W — вариант восьмерок с гирей": { "unit": "reps", "needWeight": true },
+  "Армейский жим стоя": { "unit": "reps", "needWeight": true },
+  "Баттерфляй": { "unit": "duration", "needWeight": false },
+  "Бег на беговой дорожке": { "unit": "duration", "needWeight": false },
+  "Бег на улице": { "unit": "duration", "needWeight": false },
+  "Боковые выпады со штангой": { "unit": "reps", "needWeight": true },
+  "Боковые прыжки через платформу": { "unit": "reps", "needWeight": false },
+  "Боковые скручивания": { "unit": "reps", "needWeight": false },
+  "Брасс": { "unit": "duration", "needWeight": false },
+  "Бурпи": { "unit": "reps", "needWeight": false },
+  "Быстрые приседания со штангой": { "unit": "reps", "needWeight": true },
+  "Вертикальная тяга гантелей": { "unit": "reps", "needWeight": true },
+  "Вертикальная тяга нижнего блока": { "unit": "reps", "needWeight": true },
+  "Вертикальная тяга штанги": { "unit": "reps", "needWeight": true },
+  "Вертикальный жим ногами": { "unit": "reps", "needWeight": false },
+  "Взятие гири на грудь двумя руками": { "unit": "reps", "needWeight": true },
+  "Взятие штанги на грудь с выпадом": { "unit": "reps", "needWeight": true },
+  "Вис на одной руке": { "unit": "duration", "needWeight": false },
+  "Вращение плеча внутрь": { "unit": "reps", "needWeight": false },
+  "Выпады назад с гантелями (обратные выпады)": {
+    "unit": "reps",
+    "needWeight": true
+  },
+  "Выпады с гантелями": { "unit": "reps", "needWeight": true },
+  "Выпады со штангой": { "unit": "reps", "needWeight": true },
+  "Выпрямление ног в тренажере": { "unit": "reps", "needWeight": true },
+  "Гакк-приседания": { "unit": "reps", "needWeight": true },
+  "Гакк-приседания с узкой постановкой стоп": {
+    "unit": "reps",
+    "needWeight": true
+  },
+  "Гиперэкстензия": { "unit": "reps", "needWeight": false },
+  "Гиперэкстензия на фитболе": { "unit": "reps", "needWeight": false },
+  "Гиперэкстензия с напарником": { "unit": "reps", "needWeight": false },
+  "Глубокие приседания с гирями": { "unit": "reps", "needWeight": true },
+  "Глубокие приседания со штангой": { "unit": "reps", "needWeight": true },
+  "Глубокие приседания со штангой на груди": {
+    "unit": "reps",
+    "needWeight": true
+  },
+  "Горизонтальные подтягивания": { "unit": "reps", "needWeight": false },
+  "Гребной тренажер": { "unit": "duration", "needWeight": false },
+  "Езда на велосипеде": { "unit": "duration", "needWeight": false },
+  "Езда на велотренажере": { "unit": "duration", "needWeight": false },
+  "Езда на лежачем велотренажере": { "unit": "duration", "needWeight": false },
+  "Жим в подъеме туловища из положения лежа": {
+    "unit": "reps",
+    "needWeight": false
+  },
+  "Жим в тренажере": { "unit": "reps", "needWeight": true },
+  "Жим в тренажере с отрицательным наклоном": {
+    "unit": "reps",
+    "needWeight": true
+  },
+  "Жим в тренажере с положительным наклоном": {
+    "unit": "reps",
+    "needWeight": true
+  },
+  "Жим гантелей лежа": { "unit": "reps", "needWeight": true },
+  "Жим гантелей лежа на полу": { "unit": "reps", "needWeight": true },
+  "Жим гантелей лежа на скамье с отрицательным наклоном": {
+    "unit": "reps",
+    "needWeight": true
+  },
+  "Жим гантелей лежа на скамье с положительным наклоном": {
+    "unit": "reps",
+    "needWeight": true
+  },
+  "Жим гантелей лежа на скамье с положительным наклоном хватом молоток": {
+    "unit": "reps",
+    "needWeight": true
+  },
+  "Жим гантелей от Арнольда Шварценеггера": {
+    "unit": "reps",
+    "needWeight": true
+  },
+  "Жим гантелей плечами на наклонной скамье": {
+    "unit": "reps",
+    "needWeight": true
+  },
+  "Жим гантелей сидя": { "unit": "reps", "needWeight": true },
+  "Жим гантелей стоя": { "unit": "reps", "needWeight": true },
+  "Жим гантели одной рукой": { "unit": "reps", "needWeight": true },
+  "Жим гири в ладони": { "unit": "reps", "needWeight": true },
+  "Жим гири в наклоне": { "unit": "reps", "needWeight": true },
+  "Жим гири к плечу": { "unit": "reps", "needWeight": true },
+  "Жим гири лежа одной рукой": { "unit": "reps", "needWeight": true },
+  "Жим гири лежа со скрещенными ногами": { "unit": "reps", "needWeight": true },
+  "Жим гири одной рукой": { "unit": "reps", "needWeight": true },
+  "Жим гири одной рукой лежа на полу": { "unit": "reps", "needWeight": true },
+  "Жим гири от Арнольда Шварценеггера": { "unit": "reps", "needWeight": true },
+  "Жим гирь над собой": { "unit": "reps", "needWeight": true },
+  "Жим лежа в машине Смита": { "unit": "reps", "needWeight": true },
+  "Жим лежа на наклонной скамье в машине Смита": {
+    "unit": "reps",
+    "needWeight": true
+  },
+  "Жим лежа на полу": { "unit": "reps", "needWeight": true },
+  "Жим лежа на полу используя цепи": { "unit": "reps", "needWeight": true },
+  "Жим лежа на скамье с эспандером": { "unit": "reps", "needWeight": true },
+  "Жим лежа узким хватом в машине Смита": {
+    "unit": "reps",
+    "needWeight": true
+  },
+  "Жим лежа широким хватом": { "unit": "reps", "needWeight": true },
+  "Жим на верхнем блоке стоя": { "unit": "reps", "needWeight": true },
+  "Жим на шею лежа на горизонтальной скамье": {
+    "unit": "reps",
+    "needWeight": true
+  },
+  "Жим нижнего блока на трицепс лежа": { "unit": "reps", "needWeight": true },
+  "Жим ногами": { "unit": "reps", "needWeight": false },
+  "Жим ногами с узкой постановкой стоп": {
+    "unit": "reps",
+    "needWeight": false
+  },
+  "Жим одной рукой в положении лежа": { "unit": "reps", "needWeight": true },
+  "Жим одной рукой лежа на горизонтальной скамье": {
+    "unit": "reps",
+    "needWeight": true
+  },
+  "Жим плечами лежа на наклонной скамье": {
+    "unit": "reps",
+    "needWeight": true
+  },
+  "Жим с цепью лежа": { "unit": "reps", "needWeight": true },
+  "Жим Свенда": { "unit": "reps", "needWeight": true },
+  "Жим сидя в тренажере": { "unit": "reps", "needWeight": true },
+  "Жим со стоек в положении лежа": { "unit": "reps", "needWeight": true },
+  "Жим стоя с эспандером": { "unit": "reps", "needWeight": true },
+  "Жим Тейта": { "unit": "reps", "needWeight": true },
+  "Жим штанги в силовой раме с эспандерами": {
+    "unit": "reps",
+    "needWeight": true
+  },
+  "Жим штанги лежа": { "unit": "reps", "needWeight": true },
+  "Жим штанги лежа на скамье": { "unit": "reps", "needWeight": true },
+  "Жим штанги лежа на скамье используя бруски": {
+    "unit": "reps",
+    "needWeight": true
+  },
+  "Жим штанги лежа на скамье используя цепи": {
+    "unit": "reps",
+    "needWeight": true
+  },
+  "Жим штанги лежа на скамье с отрицательным наклоном": {
+    "unit": "reps",
+    "needWeight": true
+  },
+  "Жим штанги лежа на скамье с положительным наклоном": {
+    "unit": "reps",
+    "needWeight": true
+  },
+  "Жим штанги лежа узким хватом": { "unit": "reps", "needWeight": true },
+  "Жим штанги сидя": { "unit": "reps", "needWeight": true },
+  "Жим штанги сидя в машине Смита": { "unit": "reps", "needWeight": true },
+  "Жим штанги сидя широким хватом": { "unit": "reps", "needWeight": true },
+  "Жим штанги стоя из-за головы": { "unit": "reps", "needWeight": true },
+  "Жим штанги широким хватом лежа на скамье с отрицательным наклоном": {
+    "unit": "reps",
+    "needWeight": true
+  },
+  "Заход на скамью с гантелями": { "unit": "reps", "needWeight": true },
+  "Заход на скамью со штангой": { "unit": "reps", "needWeight": true },
+  "Изолированное разведение гантелей в стороны": {
+    "unit": "reps",
+    "needWeight": true
+  },
+  "Изолированное разведение гантелей в стороны двумя руками": {
+    "unit": "reps",
+    "needWeight": true
+  },
+  "Касания стоп": { "unit": "reps", "needWeight": false },
+  "Катание на роликовых коньках": { "unit": "duration", "needWeight": false },
+  "Комплексная растяжка дельт": { "unit": "duration", "needWeight": false },
+  "Комплексное упражнение на трицепс на наклонной скамье": {
+    "unit": "reps",
+    "needWeight": true
+  },
+  "Комплексный жим гантелей": { "unit": "reps", "needWeight": true },
+  "Комплексный жим штанги сидя": { "unit": "reps", "needWeight": true },
+  "Концентрированные сгибания на бицепс сидя": {
+    "unit": "reps",
+    "needWeight": true
+  },
+  "Косые скручивания": { "unit": "reps", "needWeight": false },
+  "Косые скручивания на наклонной скамье": {
+    "unit": "reps",
+    "needWeight": false
+  },
+  "Кроль (вольный стиль)": { "unit": "duration", "needWeight": false },
+  "Кроссовер с эспандером": { "unit": "reps", "needWeight": false },
+  "Круговые движения коленями": { "unit": "reps", "needWeight": false },
+  "Круговые движения локтями": { "unit": "reps", "needWeight": false },
+  "Круговые движения плечами": { "unit": "reps", "needWeight": false },
+  "Круговые движения руками": { "unit": "reps", "needWeight": false },
+  "Кубинский жим": { "unit": "reps", "needWeight": true },
+  "Махи гирей одной рукой": { "unit": "reps", "needWeight": true },
+  "Махи назад": { "unit": "reps", "needWeight": false },
+  "Махи назад согнутой ногой": { "unit": "reps", "needWeight": false },
+  "Махи ногами лежа на скамье": { "unit": "reps", "needWeight": false },
+  "Махи ногой": { "unit": "reps", "needWeight": false },
+  "Махи ногой на нижнем блоке": { "unit": "reps", "needWeight": false },
+  "Махи руками с эспандером": { "unit": "reps", "needWeight": false },
+  "Мощный рывок штанги над головой": { "unit": "reps", "needWeight": true },
+  "Наклон в сторону на мяче с отягощением": {
+    "unit": "reps",
+    "needWeight": true
+  },
+  "Наклоны в сторону с гантелей": { "unit": "reps", "needWeight": true },
+  "Наклоны в сторону со штангой": { "unit": "reps", "needWeight": true },
+  "Обратная гиперэкстензия": { "unit": "reps", "needWeight": false },
+  "Обратное скручивание лежа на животе": {
+    "unit": "reps",
+    "needWeight": false
+  },
+  "Обратные скручивания в положении лежа": {
+    "unit": "reps",
+    "needWeight": false
+  },
+  "Обратный жим лежа на скамье": { "unit": "reps", "needWeight": true },
+  "Олимпийские приседания": { "unit": "reps", "needWeight": true },
+  "Отведение гантелей назад в наклоне": { "unit": "reps", "needWeight": true },
+  "Отведение гантелей через стороны лежа": {
+    "unit": "reps",
+    "needWeight": true
+  },
+  "Отведение ноги в сторону": { "unit": "reps", "needWeight": false },
+  "Отведение руки в сторону в наклоне на блоке": {
+    "unit": "reps",
+    "needWeight": false
+  },
+  "Отведение руки в сторону на нижнем блоке": {
+    "unit": "reps",
+    "needWeight": false
+  },
+  "Отжимания": { "unit": "reps", "needWeight": false },
+  "Отжимания «Пика»": { "unit": "reps", "needWeight": false },
+  "Отжимания в наклоне": { "unit": "reps", "needWeight": false },
+  "Отжимания в тренажере": { "unit": "reps", "needWeight": false },
+  "Отжимания на брусьях": { "unit": "reps", "needWeight": false },
+  "Отжимания на брусьях – вариант для проработки грудных мышц": {
+    "unit": "reps",
+    "needWeight": false
+  },
+  "Отжимания на одной руке": { "unit": "reps", "needWeight": false },
+  "Отжимания от скамьи из-за спины": { "unit": "reps", "needWeight": false },
+  "Отжимания от скамьи с весом": { "unit": "reps", "needWeight": true },
+  "Отжимания с ногами на мяче": { "unit": "reps", "needWeight": false },
+  "Отжимания с поднятыми ногами": { "unit": "reps", "needWeight": false },
+  "Отжимания с узким упором": { "unit": "reps", "needWeight": false },
+  "Отжимания с широким упором": { "unit": "reps", "needWeight": false },
+  "Отжимания стоя на руках": { "unit": "reps", "needWeight": false },
+  "Перекрёстная тяга на блоках": { "unit": "reps", "needWeight": false },
+  "Плавание на спине": { "unit": "duration", "needWeight": false },
+  "Планка": { "unit": "duration", "needWeight": false },
+  "Плиометрические отжимания": { "unit": "reps", "needWeight": false },
+  "Плиометрические отжимания с гирей": { "unit": "reps", "needWeight": true },
+  "Плиометрические отжимания с опорами": {
+    "unit": "reps",
+    "needWeight": false
+  },
+  "Плиометрическое упражнение на укрепление мышц шеи": {
+    "unit": "reps",
+    "needWeight": false
+  },
+  "Повороты с блином": { "unit": "reps", "needWeight": true },
+  "Повороты с фитболом": { "unit": "reps", "needWeight": false },
+  "Повороты со штангой сидя на скамье": { "unit": "reps", "needWeight": true },
+  "Поднятие диска, лежа головой вверх на скамье": {
+    "unit": "reps",
+    "needWeight": true
+  },
+  "Поднятие диска, лежа головой вниз на скамье": {
+    "unit": "reps",
+    "needWeight": true
+  },
+  "Подтягивание коленей к груди": { "unit": "reps", "needWeight": false },
+  "Подтягивание на перекладине (горилла кранч)": {
+    "unit": "reps",
+    "needWeight": false
+  },
+  "Подъем ног лежа на горизонтальной скамье": {
+    "unit": "reps",
+    "needWeight": false
+  },
+  "Подтягивание ног к груди на горизонтальной скамье": {
+    "unit": "reps",
+    "needWeight": false
+  },
+  "Подтягивание ног к груди на фитболе": {
+    "unit": "reps",
+    "needWeight": false
+  },
+  "Подтягивания": { "unit": "reps", "needWeight": false },
+  "Подтягивания в стороны": { "unit": "reps", "needWeight": false },
+  "Подтягивания на одной руке": { "unit": "reps", "needWeight": false },
+  "Подтягивания нейтральным хватом": { "unit": "reps", "needWeight": false },
+  "Подтягивания ног к груди сидя на горизонтальной скамье": {
+    "unit": "reps",
+    "needWeight": false
+  },
+  "Подтягивания обратным хватом": { "unit": "reps", "needWeight": false },
+  "Подтягивания от Винса Жиронды": { "unit": "reps", "needWeight": false },
+  "Подтягивания от Рокки": { "unit": "reps", "needWeight": false },
+  "Подтягивания с отягощением": { "unit": "reps", "needWeight": true },
+  "Подтягивания смешанным хватом": { "unit": "reps", "needWeight": false },
+  "Подтягивания широким хватом": { "unit": "reps", "needWeight": false },
+  "Подтягивания широким хватом за голову": {
+    "unit": "reps",
+    "needWeight": false
+  },
+  "Подъем EZ-штанги на бицепс на скамье Скотта": {
+    "unit": "reps",
+    "needWeight": true
+  },
+  "Подъем EZ-штанги на бицепс на скамье Скотта обратным хватом": {
+    "unit": "reps",
+    "needWeight": true
+  },
+  "Подъем EZ-штанги на бицепс стоя": { "unit": "reps", "needWeight": true },
+  "Подъем EZ-штанги на бицепс стоя узким хватом": {
+    "unit": "reps",
+    "needWeight": true
+  },
+  "Подъём блина перед собой": { "unit": "reps", "needWeight": true },
+  "Подъем гантелей": { "unit": "reps", "needWeight": true },
+  "Подъем гантелей на бицепс в наклоне": { "unit": "reps", "needWeight": true },
+  "Подъем гантелей на бицепс на наклонной скамье хватом «молоток»": {
+    "unit": "reps",
+    "needWeight": true
+  },
+  "Подъем гантелей на бицепс на скамье Скотта": {
+    "unit": "reps",
+    "needWeight": true
+  },
+  "Подъем гантелей на бицепс пронированным хватом стоя": {
+    "unit": "reps",
+    "needWeight": true
+  },
+  "Подъем гантелей на бицепс сидя": { "unit": "reps", "needWeight": true },
+  "Подъем гантелей на бицепс стоя": { "unit": "reps", "needWeight": true },
+  "Подъем гантелей на бицепс хватом «молоток»": {
+    "unit": "reps",
+    "needWeight": true
+  },
+  "Подъем гантелей на бицепс через стороны сидя": {
+    "unit": "reps",
+    "needWeight": true
+  },
+  "Подъем гантелей на бицепс через стороны стоя": {
+    "unit": "reps",
+    "needWeight": true
+  },
+  "Подъём гантелей над головой": { "unit": "reps", "needWeight": true },
+  "Подъем гантелей перед собой": { "unit": "reps", "needWeight": true },
+  "Подъём гантелей перед собой на наклонной скамье": {
+    "unit": "reps",
+    "needWeight": true
+  },
+  "Подъём гантели одной рукой в сторону": {
+    "unit": "reps",
+    "needWeight": true
+  },
+  "Подъём гантели одной рукой лежа на боку": {
+    "unit": "reps",
+    "needWeight": true
+  },
+  "Подъём гантели одной рукой на наклонной скамье": {
+    "unit": "reps",
+    "needWeight": true
+  },
+  "Подъем гири на грудь": { "unit": "reps", "needWeight": true },
+  "Подъем гири на грудь (гиря на уровне бедер)": {
+    "unit": "reps",
+    "needWeight": true
+  },
+  "Подъем гири одной рукой": { "unit": "reps", "needWeight": true },
+  "Подъём гирь на плечи": { "unit": "reps", "needWeight": true },
+  "Подъем и удержание гири перед собой": { "unit": "reps", "needWeight": true },
+  "Подъем изогнутой штанги лежа на скамье": {
+    "unit": "reps",
+    "needWeight": true
+  },
+  "Подъем на носки в тренажере сидя": { "unit": "reps", "needWeight": true },
+  "Подъем на носки в тренажере стоя": { "unit": "reps", "needWeight": true },
+  "Подъем на носки на одной ноге": { "unit": "reps", "needWeight": true },
+  "Подъем на носки с гантелей сидя": { "unit": "reps", "needWeight": true },
+  "Подъем на носки с гантелями стоя": { "unit": "reps", "needWeight": true },
+  "Подъем на носки со штангой": { "unit": "reps", "needWeight": true },
+  "Подъем на носки со штангой сидя": { "unit": "reps", "needWeight": true },
+  "Подъем на пятки в машине Смита": { "unit": "reps", "needWeight": true },
+  "Подъем ног в висе на перекладине": { "unit": "reps", "needWeight": false },
+  "Подъем ног в положении лежа": { "unit": "reps", "needWeight": false },
+  "Подъем ног в тренажере с упорами для локтей": {
+    "unit": "reps",
+    "needWeight": false
+  },
+  "Подъем ног к перекладине": { "unit": "reps", "needWeight": false },
+  "Подъем ног на наклонной скамье": { "unit": "reps", "needWeight": false },
+  "Подъем ноги перед собой": { "unit": "reps", "needWeight": false },
+  "Подъем носков в тренажере для жима ногами": {
+    "unit": "reps",
+    "needWeight": true
+  },
+  "Подъём плеч": { "unit": "reps", "needWeight": false },
+  "Подъём рук перед собой в тросовом тренажере": {
+    "unit": "reps",
+    "needWeight": false
+  },
+  "Подъём рук с эспандером стоя": { "unit": "reps", "needWeight": false },
+  "Подъем согнутых в коленях ног": { "unit": "reps", "needWeight": false },
+  "Подъем туловища в тренажере": { "unit": "reps", "needWeight": false },
+  "Подъем туловища из положения лежа": { "unit": "reps", "needWeight": false },
+  "Подъем туловища из положения лежа по методу Янда": {
+    "unit": "reps",
+    "needWeight": false
+  },
+  "Подъем туловища на наклонной скамье с отягощением": {
+    "unit": "reps",
+    "needWeight": true
+  },
+  "Подъем штанги на бицепс": { "unit": "reps", "needWeight": true },
+  "Подъем штанги на бицепс на наклонной скамье": {
+    "unit": "reps",
+    "needWeight": true
+  },
+  "Подъем штанги на бицепс обратным хватом": {
+    "unit": "reps",
+    "needWeight": true
+  },
+  "Подъем штанги на бицепс узким хватом": {
+    "unit": "reps",
+    "needWeight": true
+  },
+  "Подъем штанги на бицепс узким хватом в положении сидя": {
+    "unit": "reps",
+    "needWeight": true
+  },
+  "Подъем штанги на бицепс широким хватом": {
+    "unit": "reps",
+    "needWeight": true
+  },
+  "Подъем штанги на грудь": { "unit": "reps", "needWeight": true },
+  "Подъем штанги на грудь (с подставок)": {
+    "unit": "reps",
+    "needWeight": true
+  },
+  "Подъем штанги на грудь (с уровня бедер)": {
+    "unit": "reps",
+    "needWeight": true
+  },
+  "Подъем штанги на грудь (с уровня колен)": {
+    "unit": "reps",
+    "needWeight": true
+  },
+  "Подъем штанги на грудь и жим": { "unit": "reps", "needWeight": true },
+  "Подъем штанги на грудь используя блоки (подставки)": {
+    "unit": "reps",
+    "needWeight": true
+  },
+  "Подъем штанги на плечи": { "unit": "reps", "needWeight": true },
+  "Подъём штанги плечами сидя в машине Смита": {
+    "unit": "reps",
+    "needWeight": true
+  },
+  "Подъем ягодиц": { "unit": "reps", "needWeight": false },
+  "Подъем ягодиц («Мост»)": { "unit": "reps", "needWeight": false },
+  "Подъем ягодиц со штангой": { "unit": "reps", "needWeight": true },
+  "Подъем ягодиц со штангой, опираясь на скамью": {
+    "unit": "reps",
+    "needWeight": true
+  },
+  "Поочередное сгибание рук на бицепс сидя на наклонной скамье": {
+    "unit": "reps",
+    "needWeight": true
+  },
+  "Поочередный жим гирь лежа на полу": { "unit": "reps", "needWeight": true },
+  "Поочередный подъем гирь назад": { "unit": "reps", "needWeight": true },
+  "Попеременная тяга гирь": { "unit": "reps", "needWeight": true },
+  "Попеременные боковые скручивания": { "unit": "reps", "needWeight": false },
+  "Попеременный жим гирь стоя": { "unit": "reps", "needWeight": true },
+  "Попеременный подъем гантелей на бицепс": {
+    "unit": "reps",
+    "needWeight": true
+  },
+  "Попеременный подъем гантелей на бицепс на наклонной скамье": {
+    "unit": "reps",
+    "needWeight": true
+  },
+  "Попеременный подъем гантелей на бицепс хватом «молоток»": {
+    "unit": "reps",
+    "needWeight": true
+  },
+  "Попеременный подъём гантелей перед собой": {
+    "unit": "reps",
+    "needWeight": true
+  },
+  "Попеременный подъем на пятки и на носки со штангой": {
+    "unit": "reps",
+    "needWeight": true
+  },
+  "Пресс с гимнастическим роликом": { "unit": "reps", "needWeight": false },
+  "Приведения ноги на нижнем блоке": { "unit": "reps", "needWeight": false },
+  "Приседания": { "unit": "reps", "needWeight": true },
+  "Приседания Андерсона": { "unit": "reps", "needWeight": true },
+  "Приседания в машине Смита": { "unit": "reps", "needWeight": true },
+  "Приседания в машине Смита на одной ноге": {
+    "unit": "reps",
+    "needWeight": true
+  },
+  "Приседания в силовой раме": { "unit": "reps", "needWeight": true },
+  "Приседания в силовой раме со штангой в висе": {
+    "unit": "reps",
+    "needWeight": true
+  },
+  "Приседания в тренажере в положении лежа": {
+    "unit": "reps",
+    "needWeight": false
+  },
+  "Приседания Джефферсона": { "unit": "reps", "needWeight": true },
+  "Приседания Зерхера": { "unit": "reps", "needWeight": true },
+  "Приседания плие с гантелей": { "unit": "reps", "needWeight": true },
+  "Приседания с гантелями": { "unit": "reps", "needWeight": true },
+  "Приседания с гантелями используя скамью": {
+    "unit": "reps",
+    "needWeight": true
+  },
+  "Приседания с гирей (гоблет)": { "unit": "reps", "needWeight": true },
+  "Приседания с гирей на одной ноге": { "unit": "reps", "needWeight": true },
+  "Приседания с гирей над головой": { "unit": "reps", "needWeight": true },
+  "Приседания с отягощением": { "unit": "reps", "needWeight": true },
+  "Приседания с цепями": { "unit": "reps", "needWeight": true },
+  "Приседания с эспандером": { "unit": "reps", "needWeight": false },
+  "Приседания со штангой": { "unit": "reps", "needWeight": true },
+  "Приседания со штангой за спиной": { "unit": "reps", "needWeight": true },
+  "Приседания со штангой на груди": { "unit": "reps", "needWeight": true },
+  "Приседания со штангой на груди используя скамью": {
+    "unit": "reps",
+    "needWeight": true
+  },
+  "Приседания со штангой на одной ноге": { "unit": "reps", "needWeight": true },
+  "Приседания со штангой над головой": { "unit": "reps", "needWeight": true },
+  "Приседания со штангой с узкой постановкой стоп": {
+    "unit": "reps",
+    "needWeight": true
+  },
+  "Приседания со штангой с широкой постановкой стоп": {
+    "unit": "reps",
+    "needWeight": true
+  },
+  "Приседания со штангой, используя скамью": {
+    "unit": "reps",
+    "needWeight": true
+  },
+  "Приседания со штангой, используя ящик": {
+    "unit": "reps",
+    "needWeight": true
+  },
+  "Приседания со штангой, используя ящик и цепи": {
+    "unit": "reps",
+    "needWeight": true
+  },
+  "Приседания со штангой, используя ящик и эспандеры": {
+    "unit": "reps",
+    "needWeight": true
+  },
+  "Приседания стоя на коленях": { "unit": "reps", "needWeight": false },
+  "Приседания Франкенштейна (приседания с вытянутыми руками)": {
+    "unit": "reps",
+    "needWeight": true
+  },
+  "Прогулка фермера": { "unit": "duration", "needWeight": true },
+  "Прыжки": { "unit": "reps", "needWeight": false },
+  "Прыжки на подставку": { "unit": "reps", "needWeight": false },
+  "Прыжки ноги вместе, ноги врозь": { "unit": "reps", "needWeight": false },
+  "Прыжки с выпадами": { "unit": "reps", "needWeight": false },
+  "Прыжки с приседаниями": { "unit": "reps", "needWeight": false },
+  "Прыжки через скакалку": { "unit": "duration", "needWeight": false },
+  "Прыжок со штангой из упора сидя": { "unit": "reps", "needWeight": true },
+  "Пуловер и подъем": { "unit": "reps", "needWeight": true },
+  "Пуловер на наклонной скамье в тросовом тренажере": {
+    "unit": "reps",
+    "needWeight": true
+  },
+  "Пуловер прямыми руками с гантелей лежа на скамье": {
+    "unit": "reps",
+    "needWeight": true
+  },
+  "Пуловер с гантелей лежа на скамье": { "unit": "reps", "needWeight": true },
+  "Пуловер со штангой на наклонной скамье": {
+    "unit": "reps",
+    "needWeight": true
+  },
+  "Пуловер со штангой на прямой скамье": { "unit": "reps", "needWeight": true },
+  "Разведение гантелей c вращением лежа на наклонной скамье": {
+    "unit": "reps",
+    "needWeight": true
+  },
+  "Разведение гантелей в стороны лежа лицом вниз": {
+    "unit": "reps",
+    "needWeight": true
+  },
+  "Разведение гантелей лежа на наклонной скамье лицом вниз": {
+    "unit": "reps",
+    "needWeight": true
+  },
+  "Разведение гантелей сидя в наклоне": { "unit": "reps", "needWeight": true },
+  "Разведение ног в тренажере": { "unit": "reps", "needWeight": false },
+  "Разведение рук в стороны на нижнем блоке": {
+    "unit": "reps",
+    "needWeight": false
+  },
+  "Разведение рук в тренажере (обратная бабочка)": {
+    "unit": "reps",
+    "needWeight": false
+  },
+  "Разведение рук с гантелями в стороны сидя": {
+    "unit": "reps",
+    "needWeight": true
+  },
+  "Разведение рук с гантелями в стороны стоя": {
+    "unit": "reps",
+    "needWeight": true
+  },
+  "Разведение рук с гантелями в упоре": { "unit": "reps", "needWeight": true },
+  "Разгибание гантели из-за головы": { "unit": "reps", "needWeight": true },
+  "Разгибание гантели пронированным хватом": {
+    "unit": "reps",
+    "needWeight": true
+  },
+  "Разгибание гантели супинированным хватом": {
+    "unit": "reps",
+    "needWeight": true
+  },
+  "Разгибание двумя руками на трицепс в наклоне": {
+    "unit": "reps",
+    "needWeight": true
+  },
+  "Разгибание двумя руками на трицепс сидя в наклоне": {
+    "unit": "reps",
+    "needWeight": true
+  },
+  "Разгибание на трицепс на верхнем блоке": {
+    "unit": "reps",
+    "needWeight": false
+  },
+  "Разгибание на трицепс на верхнем блоке обратным хватом": {
+    "unit": "reps",
+    "needWeight": false
+  },
+  "Разгибание на трицепс на верхнем блоке одной рукой": {
+    "unit": "reps",
+    "needWeight": false
+  },
+  "Разгибание на трицепс на верхнем блоке с V-рукоятью": {
+    "unit": "reps",
+    "needWeight": false
+  },
+  "Разгибание на трицепс на верхнем блоке с канатной рукоятью": {
+    "unit": "reps",
+    "needWeight": false
+  },
+  "Разгибание одной руки на трицепс сидя в наклоне": {
+    "unit": "reps",
+    "needWeight": true
+  },
+  "Разгибание одной рукой на трицепс в наклоне": {
+    "unit": "reps",
+    "needWeight": true
+  },
+  "Разгибание одной рукой на трицепс на нижнем блоке": {
+    "unit": "reps",
+    "needWeight": false
+  },
+  "Разгибание рук на блоке из-за головы стоя на коленях": {
+    "unit": "reps",
+    "needWeight": false
+  },
+  "Разгибание штанги узким хватом в положении лежа": {
+    "unit": "reps",
+    "needWeight": true
+  },
+  "Разгибания на трицепс в тренажере": { "unit": "reps", "needWeight": false },
+  "Разгибания на трицепс на верхнем блоке лежа на наклонной скамье": {
+    "unit": "reps",
+    "needWeight": false
+  },
+  "Растягивание грудных мышц заведением рук за голову": {
+    "unit": "duration",
+    "needWeight": false
+  },
+  "Растягивание икроножных мышц в положении сидя": {
+    "unit": "duration",
+    "needWeight": false
+  },
+  "Растягивание мышц брюшного пресса": {
+    "unit": "duration",
+    "needWeight": false
+  },
+  "Растягивание мышц груди и передней части плечевого пояса": {
+    "unit": "duration",
+    "needWeight": false
+  },
+  "Растягивание мышц груди с помощью фитбола": {
+    "unit": "duration",
+    "needWeight": false
+  },
+  "Растягивание мышц пресса сидя на полу": {
+    "unit": "duration",
+    "needWeight": false
+  },
+  "Растягивание мышц пресса стоя": { "unit": "duration", "needWeight": false },
+  "Растягивание мышц шеи в стороны": {
+    "unit": "duration",
+    "needWeight": false
+  },
+  "Растягивание широчайших мышц спины лежа": {
+    "unit": "duration",
+    "needWeight": false
+  },
+  "Растягивание широчайших мышц спины с напарником": {
+    "unit": "duration",
+    "needWeight": false
+  },
+  "Растягивания широчайших мышц спины в упоре стоя": {
+    "unit": "duration",
+    "needWeight": false
+  },
+  "Растяжение внутренних мышц бедра": {
+    "unit": "duration",
+    "needWeight": false
+  },
+  "Растяжение мышц задней поверхности бедра": {
+    "unit": "duration",
+    "needWeight": false
+  },
+  "Растяжка альпиниста": { "unit": "duration", "needWeight": false },
+  "Растяжка бицепсов стоя": { "unit": "duration", "needWeight": false },
+  "Растяжка брахиалиса": { "unit": "duration", "needWeight": false },
+  "Растяжка в положении лежа": { "unit": "duration", "needWeight": false },
+  "Растяжка в положении сидя": { "unit": "duration", "needWeight": false },
+  "Растяжка внутренних мышц бедер": { "unit": "duration", "needWeight": false },
+  "Растяжка грудных мышц лежа на фитболе": {
+    "unit": "duration",
+    "needWeight": false
+  },
+  "Растяжка грудных мышц отведением плеч": {
+    "unit": "duration",
+    "needWeight": false
+  },
+  "Растяжка дельт": { "unit": "duration", "needWeight": false },
+  "Растяжка дельт стоя": { "unit": "duration", "needWeight": false },
+  "Растяжка дельт, сидя на стуле": { "unit": "duration", "needWeight": false },
+  "Растяжка для отводящих мышц бедра": {
+    "unit": "duration",
+    "needWeight": false
+  },
+  "Растяжка задних дельт с гимнастической палкой": {
+    "unit": "duration",
+    "needWeight": false
+  },
+  "Растяжка икр и мышц задней поверхности бедра сидя на полу": {
+    "unit": "duration",
+    "needWeight": false
+  },
+  "Растяжка икроножных мышц в положении стоя": {
+    "unit": "duration",
+    "needWeight": false
+  },
+  "Растяжка квадрицепсов": { "unit": "duration", "needWeight": false },
+  "Растяжка квадрицепсов с использованием платформы": {
+    "unit": "duration",
+    "needWeight": false
+  },
+  "Растяжка квадрицепсов с отгибанием назад": {
+    "unit": "duration",
+    "needWeight": false
+  },
+  "Растяжка квадрицепсов с помощью валика": {
+    "unit": "duration",
+    "needWeight": false
+  },
+  "Растяжка лежа на полу": { "unit": "duration", "needWeight": false },
+  "Растяжка мышц бедра лежа на боку": {
+    "unit": "duration",
+    "needWeight": false
+  },
+  "Растяжка мышц бедра лежа на скамье": {
+    "unit": "duration",
+    "needWeight": false
+  },
+  "Растяжка мышц в положении сидя": { "unit": "duration", "needWeight": false },
+  "Растяжка мышц голени и задней поверхности бедра в положении стоя": {
+    "unit": "duration",
+    "needWeight": false
+  },
+  "Растяжка мышц задней поверхности бедра в положении лежа": {
+    "unit": "duration",
+    "needWeight": false
+  },
+  "Растяжка мышц задней поверхности бедра в положении лежа (90/90)": {
+    "unit": "duration",
+    "needWeight": false
+  },
+  "Растяжка мышц задней поверхности бедра в положении стоя": {
+    "unit": "duration",
+    "needWeight": false
+  },
+  "Растяжка мышц задней поверхности бедра с помощью наклона вперед": {
+    "unit": "duration",
+    "needWeight": false
+  },
+  "Растяжка мышц задней поверхности бедра сидя на полу": {
+    "unit": "duration",
+    "needWeight": false
+  },
+  "Растяжка мышц задней поверхности бедра сидя на стуле": {
+    "unit": "duration",
+    "needWeight": false
+  },
+  "Растяжка мышц нижней части спины": {
+    "unit": "duration",
+    "needWeight": false
+  },
+  "Растяжка мышц нижней части спины в положении лежа («мост»)": {
+    "unit": "duration",
+    "needWeight": false
+  },
+  "Растяжка мышц нижней части спины в положении лежа («пирамида»)": {
+    "unit": "duration",
+    "needWeight": false
+  },
+  "Растяжка мышц обхватывая бедра в положении сидя": {
+    "unit": "duration",
+    "needWeight": false
+  },
+  "Растяжка мышц спины": { "unit": "duration", "needWeight": false },
+  "Растяжка мышц спины в положении стоя": {
+    "unit": "duration",
+    "needWeight": false
+  },
+  "Растяжка мышц спины сидя на стуле": {
+    "unit": "duration",
+    "needWeight": false
+  },
+  "Растяжка отводящих мышц бедра": { "unit": "duration", "needWeight": false },
+  "Растяжка переднего пучка дельт сидя": {
+    "unit": "duration",
+    "needWeight": false
+  },
+  "Растяжка поясничного треугольника": {
+    "unit": "duration",
+    "needWeight": false
+  },
+  "Растяжка предплечий стоя на коленях": {
+    "unit": "duration",
+    "needWeight": false
+  },
+  "Растяжка приводящих мышц бедра лежа на боку": {
+    "unit": "duration",
+    "needWeight": false
+  },
+  "Растяжка с выпадом": { "unit": "duration", "needWeight": false },
+  "Растяжка с выпадом и поворотом": { "unit": "duration", "needWeight": false },
+  "Растяжка с приседанием": { "unit": "duration", "needWeight": false },
+  "Растяжка с фитболом": { "unit": "duration", "needWeight": false },
+  "Растяжка сгибателей бедра и квадрицепсов": {
+    "unit": "duration",
+    "needWeight": false
+  },
+  "Растяжка сгибателей бедра стоя на колене": {
+    "unit": "duration",
+    "needWeight": false
+  },
+  "Растяжка супермена": { "unit": "duration", "needWeight": false },
+  "Растяжка трицепса": { "unit": "duration", "needWeight": false },
+  "Растяжка трицепсов": { "unit": "duration", "needWeight": false },
+  "Растяжка трицепсов с использованием полотенца": {
+    "unit": "duration",
+    "needWeight": false
+  },
+  "Растяжка трицепсов стоя": { "unit": "duration", "needWeight": false },
+  "Растяжка широчайших мышц спины сидя": {
+    "unit": "duration",
+    "needWeight": false
+  },
+  "Растяжка ягодичных мышц": { "unit": "duration", "needWeight": false },
+  "Растяжка ягодичных мышц (колено к груди)": {
+    "unit": "duration",
+    "needWeight": false
+  },
+  "Растяжка ягодичных мышц в положении лежа": {
+    "unit": "duration",
+    "needWeight": false
+  },
+  "Румынская становая тяга": { "unit": "reps", "needWeight": true },
+  "Румынская становая тяга на подставке": {
+    "unit": "reps",
+    "needWeight": true
+  },
+  "Русский твист (повороты туловища)": { "unit": "reps", "needWeight": false },
+  "Рывковая становая тяга": { "unit": "reps", "needWeight": true },
+  "Рывковая тяга": { "unit": "reps", "needWeight": true },
+  "Рывок гири одной рукой": { "unit": "reps", "needWeight": true },
+  "Рывок гирь": { "unit": "reps", "needWeight": true },
+  "Рывок и толчок гири одной рукой": { "unit": "reps", "needWeight": true },
+  "Рывок из-за головы": { "unit": "reps", "needWeight": true },
+  "Рывок с выпадом": { "unit": "reps", "needWeight": true },
+  "Рывок штанги": { "unit": "reps", "needWeight": true },
+  "Рывок штанги (штанга на уровне бедер)": {
+    "unit": "reps",
+    "needWeight": true
+  },
+  "Рывок штанги (штанга на уровне колен)": {
+    "unit": "reps",
+    "needWeight": true
+  },
+  "Рывок штанги над головой": { "unit": "reps", "needWeight": true },
+  "Рывок штанги с блоков": { "unit": "reps", "needWeight": true },
+  "Рывок штанги с подставок": { "unit": "reps", "needWeight": true },
+  "Сведение гантелей лежа": { "unit": "reps", "needWeight": true },
+  "Сведение гантелей на скамье с отрицательным наклоном": {
+    "unit": "reps",
+    "needWeight": true
+  },
+  "Сведение гантелей на скамье с положительным наклоном": {
+    "unit": "reps",
+    "needWeight": true
+  },
+  "Сведение ног в тренажере": { "unit": "reps", "needWeight": false },
+  "Сведение рук в кроссовере": { "unit": "reps", "needWeight": false },
+  "Сведение рук в тренажере (Бабочка)": { "unit": "reps", "needWeight": false },
+  "Сведение-разведение гантели одной рукой лежа": {
+    "unit": "reps",
+    "needWeight": true
+  },
+  "Сведения рук на нижнем блоке лежа": { "unit": "reps", "needWeight": false },
+  "Сведения рук на нижнем блоке лежа на наклонной скамье": {
+    "unit": "reps",
+    "needWeight": false
+  },
+  "Сгибание запястий на нижнем блоке": { "unit": "reps", "needWeight": true },
+  "Сгибание запястий на нижнем блоке сидя на скамье": {
+    "unit": "reps",
+    "needWeight": true
+  },
+  "Сгибание запястий на скамье с гантелями ладонями вверх": {
+    "unit": "reps",
+    "needWeight": true
+  },
+  "Сгибание запястий на скамье с гантелями ладонями вниз": {
+    "unit": "reps",
+    "needWeight": true
+  },
+  "Сгибание запястий на скамье со штангой ладонями вверх": {
+    "unit": "reps",
+    "needWeight": true
+  },
+  "Сгибание запястий на скамье со штангой ладонями вниз": {
+    "unit": "reps",
+    "needWeight": true
+  },
+  "Сгибание запястий с пронацией в положении лежа": {
+    "unit": "reps",
+    "needWeight": false
+  },
+  "Сгибание запястий с супинацией в положении лежа": {
+    "unit": "reps",
+    "needWeight": false
+  },
+  "Сгибание запястий сидя на скамье с гантелями ладонями вверх": {
+    "unit": "reps",
+    "needWeight": true
+  },
+  "Сгибание запястий сидя на скамье с гантелями ладонями вниз": {
+    "unit": "reps",
+    "needWeight": true
+  },
+  "Сгибание запястий со штангой сидя на скамье (ладонями вверх)": {
+    "unit": "reps",
+    "needWeight": true
+  },
+  "Сгибание запястий со штангой сидя на скамье (ладонями вниз)": {
+    "unit": "reps",
+    "needWeight": true
+  },
+  "Сгибание запястья сидя на скамье пронированным хватом": {
+    "unit": "reps",
+    "needWeight": true
+  },
+  "Сгибание запястья сидя на скамье супинированным хватом": {
+    "unit": "reps",
+    "needWeight": true
+  },
+  "Сгибание ног в тренажере лежа": { "unit": "reps", "needWeight": false },
+  "Сгибание ног в тренажере сидя": { "unit": "reps", "needWeight": false },
+  "Сгибание ног в тренажере стоя": { "unit": "reps", "needWeight": false },
+  "Сгибание ног на фитболе": { "unit": "reps", "needWeight": false },
+  "Сгибание одной рукой на бицепс на скамье Скотта": {
+    "unit": "reps",
+    "needWeight": true
+  },
+  "Сгибание рук на бицепс на блоке в положении лежа": {
+    "unit": "reps",
+    "needWeight": false
+  },
+  "Сгибание рук на бицепс на верхнем блоке": {
+    "unit": "reps",
+    "needWeight": false
+  },
+  "Сгибание рук на бицепс на верхнем блоке узким хватом": {
+    "unit": "reps",
+    "needWeight": false
+  },
+  "Сгибание рук на бицепс на нижнем блоке обратным хватом": {
+    "unit": "reps",
+    "needWeight": false
+  },
+  "Сгибание рук на бицепс на нижнем блоке с канатной рукоятью": {
+    "unit": "reps",
+    "needWeight": false
+  },
+  "Сгибание рук на бицепс на скамье Скотта на нижнем блоке": {
+    "unit": "reps",
+    "needWeight": false
+  },
+  "Сгибание рук на бицепс над головой на верхнем блоке": {
+    "unit": "reps",
+    "needWeight": false
+  },
+  "Сгибание рук на бицепс перед собой с гантелями хватом «молоток»": {
+    "unit": "reps",
+    "needWeight": true
+  },
+  "Сгибание рук на бицепс с гантелями лежа": {
+    "unit": "reps",
+    "needWeight": true
+  },
+  "Сгибание рук на бицепс с диском": { "unit": "reps", "needWeight": true },
+  "Сгибание рук на бицепс с наклоном вперед": {
+    "unit": "reps",
+    "needWeight": true
+  },
+  "Сгибание рук на бицепс со штангой в положении лежа": {
+    "unit": "reps",
+    "needWeight": true
+  },
+  "Сгибание рук на бицепс со штангой, с отведением локтей назад": {
+    "unit": "reps",
+    "needWeight": true
+  },
+  "Сгибание рук на бицепс хватом «молоток» на скамье Скотта": {
+    "unit": "reps",
+    "needWeight": true
+  },
+  "Сгибание рук на бицепс-машине": { "unit": "reps", "needWeight": true },
+  "Сгибание рук с гантелями на бицепс на наклонной скамье": {
+    "unit": "reps",
+    "needWeight": true
+  },
+  "Сгибание руки на бицепс на нижнем блоке стоя": {
+    "unit": "reps",
+    "needWeight": false
+  },
+  "Сгибание руки на бицепс стоя рядом с наклонной скамьей": {
+    "unit": "reps",
+    "needWeight": false
+  },
+  "Сгибания запястий за спиной со штангой в положении стоя": {
+    "unit": "reps",
+    "needWeight": true
+  },
+  "Сгибания Зоттмана (развороты предплечий с гантелями)": {
+    "unit": "reps",
+    "needWeight": true
+  },
+  "Сгибания Зоттмана на скамье Скотта": { "unit": "reps", "needWeight": true },
+  "Сгибания на бицепс в тренажере": { "unit": "reps", "needWeight": true },
+  "Сгибания рук на бицепс на нижнем блоке стоя": {
+    "unit": "reps",
+    "needWeight": true
+  },
+  "Сисси-приседы": { "unit": "reps", "needWeight": false },
+  "Скручивания": { "unit": "reps", "needWeight": false },
+  "Скручивания в тренажере для пресса": { "unit": "reps", "needWeight": false },
+  "Скручивания на блоке": { "unit": "reps", "needWeight": false },
+  "Скручивания на верхнем блоке": { "unit": "reps", "needWeight": false },
+  "Скручивания на наклонной скамье": { "unit": "reps", "needWeight": false },
+  "Скручивания на фитболе": { "unit": "reps", "needWeight": false },
+  "Скручивания с ногами на фитболе": { "unit": "reps", "needWeight": false },
+  "Скручивания с отягощением": { "unit": "reps", "needWeight": true },
+  "Скручивания с поднятыми ногами": { "unit": "reps", "needWeight": false },
+  "Скручивания с руками над головой": { "unit": "reps", "needWeight": false },
+  "Становая тяга": { "unit": "reps", "needWeight": true },
+  "Становая тяга в машине Смита с прямыми ногами": {
+    "unit": "reps",
+    "needWeight": true
+  },
+  "Становая тяга в силовой раме с эспандерами": {
+    "unit": "reps",
+    "needWeight": true
+  },
+  "Становая тяга на платформе или подставке": {
+    "unit": "reps",
+    "needWeight": true
+  },
+  "Становая тяга с гантелями": { "unit": "reps", "needWeight": true },
+  "Становая тяга с гирей стоя на одной ноге": {
+    "unit": "reps",
+    "needWeight": true
+  },
+  "Становая тяга с цепями": { "unit": "reps", "needWeight": true },
+  "Становая тяга с эспандером": { "unit": "reps", "needWeight": true },
+  "Становая тяга со штангой": { "unit": "reps", "needWeight": true },
+  "Становая тяга со штангой в одной руке": {
+    "unit": "reps",
+    "needWeight": true
+  },
+  "Становая тяга со штангой с прямыми ногами": {
+    "unit": "reps",
+    "needWeight": true
+  },
+  "Становая тяга сумо": { "unit": "reps", "needWeight": true },
+  "Статическое упражнение для мышц груди": {
+    "unit": "duration",
+    "needWeight": false
+  },
+  "Степ-тренажер": { "unit": "duration", "needWeight": false },
+  "Толчок гири одной рукой": { "unit": "reps", "needWeight": true },
+  "Толчок гирь над собой": { "unit": "reps", "needWeight": true },
+  "Толчок и жим штанги стоя": { "unit": "reps", "needWeight": true },
+  "Толчок и жим штанги стоя из-за спины": {
+    "unit": "reps",
+    "needWeight": true
+  },
+  "Толчок с выпадом": { "unit": "reps", "needWeight": true },
+  "Толчок штанги от груди": { "unit": "reps", "needWeight": true },
+  "Толчок штанги от груди (частичный)": { "unit": "reps", "needWeight": true },
+  "Толчок штанги от груди с приседом": { "unit": "reps", "needWeight": true },
+  "Тренажер, имитирующий ходьбу по лестнице": {
+    "unit": "duration",
+    "needWeight": false
+  },
+  "Тройная растяжка": { "unit": "duration", "needWeight": false },
+  "Тяга в силовой раме": { "unit": "reps", "needWeight": true },
+  "Тяга в силовой раме с эспандером": { "unit": "reps", "needWeight": true },
+  "Тяга верхнего блока за голову": { "unit": "reps", "needWeight": true },
+  "Тяга верхнего блока к груди": { "unit": "reps", "needWeight": true },
+  "Тяга верхнего блока к груди обратным хватом": {
+    "unit": "reps",
+    "needWeight": true
+  },
+  "Тяга верхнего блока к груди с V образным грифом": {
+    "unit": "reps",
+    "needWeight": true
+  },
+  "Тяга верхнего блока одной рукой стоя на коленях": {
+    "unit": "reps",
+    "needWeight": false
+  },
+  "Тяга верхнего блока с прямыми руками": {
+    "unit": "reps",
+    "needWeight": true
+  },
+  "Тяга верхнего блока широким хватом": { "unit": "reps", "needWeight": true },
+  "Тяга гантелей в наклоне": { "unit": "reps", "needWeight": true },
+  "Тяга гантелей в наклоне нейтральным хватом": {
+    "unit": "reps",
+    "needWeight": true
+  },
+  "Тяга гантели в наклоне": { "unit": "reps", "needWeight": true },
+  "Тяга гантели к груди": { "unit": "reps", "needWeight": true },
+  "Тяга гири к груди в стиле Сумо": { "unit": "reps", "needWeight": true },
+  "Тяга гирь в наклоне обеими руками": { "unit": "reps", "needWeight": true },
+  "Тяга гирь в упоре лежа": { "unit": "reps", "needWeight": true },
+  "Тяга головы к груди": { "unit": "reps", "needWeight": false },
+  "Тяга к груди в гребном тренажере": { "unit": "reps", "needWeight": false },
+  "Тяга к груди с эспандером": { "unit": "reps", "needWeight": false },
+  "Тяга к лицу": { "unit": "reps", "needWeight": true },
+  "Тяга к шее в гребном тренажере": { "unit": "reps", "needWeight": false },
+  "Тяга на наклонной скамье": { "unit": "reps", "needWeight": true },
+  "Тяга на нижнем блоке": { "unit": "reps", "needWeight": true },
+  "Тяга нижнего блока между ног": { "unit": "reps", "needWeight": true },
+  "Тяга нижнего блока одной рукой": { "unit": "reps", "needWeight": true },
+  "Тяга Т-штанги в положении лежа": { "unit": "reps", "needWeight": true },
+  "Тяга Т-штанги обеими руками в наклоне": {
+    "unit": "reps",
+    "needWeight": true
+  },
+  "Тяга Т-штанги одной рукой в наклоне": { "unit": "reps", "needWeight": true },
+  "Тяга штанги в наклоне": { "unit": "reps", "needWeight": true },
+  "Тяга штанги в наклоне в машине Смита": {
+    "unit": "reps",
+    "needWeight": true
+  },
+  "Тяга штанги в наклоне обратным хватом": {
+    "unit": "reps",
+    "needWeight": true
+  },
+  "Тяга штанги к груди в машине Смита": { "unit": "reps", "needWeight": true },
+  "Тяга штанги к груди в наклоне": { "unit": "reps", "needWeight": true },
+  "Удержание веса стоя": { "unit": "duration", "needWeight": true },
+  "Удерживание веса": { "unit": "duration", "needWeight": true },
+  "Упражнение «ослик»": { "unit": "reps", "needWeight": true },
+  "Упражнение «Доброе утро»": { "unit": "reps", "needWeight": true },
+  "Упражнение «Доброе утро» (штанга в висе)": {
+    "unit": "reps",
+    "needWeight": true
+  },
+  "Упражнение «доброе утро» в положении сидя": {
+    "unit": "reps",
+    "needWeight": true
+  },
+  "Упражнение «Доброе утро» с прямыми ногами": {
+    "unit": "reps",
+    "needWeight": true
+  },
+  "Упражнение «Доброе утро» с упоров": { "unit": "reps", "needWeight": true },
+  "Упражнение «дровосек»": { "unit": "reps", "needWeight": true },
+  "Упражнение для косых мышц живота «Мост»": {
+    "unit": "duration",
+    "needWeight": false
+  },
+  "Упражнение лягушка": { "unit": "duration", "needWeight": false },
+  "Французский жим гантелями на наклонной скамье": {
+    "unit": "reps",
+    "needWeight": true
+  },
+  "Французский жим лежа": { "unit": "reps", "needWeight": true },
+  "Французский жим лежа на скамье используя цепи": {
+    "unit": "reps",
+    "needWeight": true
+  },
+  "Французский жим лежа с гантелями": { "unit": "reps", "needWeight": true },
+  "Французский жим лежа узким хватом": { "unit": "reps", "needWeight": true },
+  "Французский жим на нижнем блоке": { "unit": "reps", "needWeight": true },
+  "Французский жим на нижнем блоке стоя": {
+    "unit": "reps",
+    "needWeight": true
+  },
+  "Французский жим одной рукой стоя": { "unit": "reps", "needWeight": true },
+  "Французский жим с EZ штангой на наклонной скамье": {
+    "unit": "reps",
+    "needWeight": true
+  },
+  "Французский жим с гантелей стоя": { "unit": "reps", "needWeight": true },
+  "Французский жим сидя": { "unit": "reps", "needWeight": true },
+  "Французский жим со штангой на наклонной скамье": {
+    "unit": "reps",
+    "needWeight": true
+  },
+  "Французский жим со штангой стоя": { "unit": "reps", "needWeight": true },
+  "Фронтальные приседания": { "unit": "reps", "needWeight": true },
+  "Фронтальный подъём штанги над головой": {
+    "unit": "reps",
+    "needWeight": true
+  },
+  "Ходьба на беговой дорожке": { "unit": "duration", "needWeight": false },
+  "Ходьба с выпадами": { "unit": "reps", "needWeight": false },
+  "Ходьба с выпадами со штангой": { "unit": "reps", "needWeight": true },
+  "Частичный рывок": { "unit": "reps", "needWeight": true },
+  "Широкая становая тяга": { "unit": "reps", "needWeight": true },
+  "Шраги в машине Смита": { "unit": "reps", "needWeight": true },
+  "Шраги в тренажере для голеней": { "unit": "reps", "needWeight": true },
+  "Шраги на нижнем блоке": { "unit": "reps", "needWeight": true },
+  "Шраги с гантелями": { "unit": "reps", "needWeight": true },
+  "Шраги с гантелями на наклонной скамье": {
+    "unit": "reps",
+    "needWeight": true
+  },
+  "Шраги со штангой": { "unit": "reps", "needWeight": true },
+  "Шраги со штангой из-за спины": { "unit": "reps", "needWeight": true },
+  "Шраги широким хватом": { "unit": "reps", "needWeight": true },
+  "Штанга в качестве гимнастического ролика": {
+    "unit": "reps",
+    "needWeight": true
+  },
+  "Эллиптический тренажер": { "unit": "duration", "needWeight": false },
+  "Энергичная растяжка грудных мышц": {
+    "unit": "duration",
+    "needWeight": false
+  }
+}

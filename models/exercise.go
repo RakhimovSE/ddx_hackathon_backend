@@ -16,6 +16,7 @@ type Exercise struct {
 	Difficulty        Difficulty      `json:"difficulty"`
 	Photos            []ExercisePhoto `json:"photos" gorm:"foreignkey:ExerciseID"`
 	Unit              string          `json:"unit"` // "reps" or "duration"
+	NeedWeight        bool            `json:"need_weight"`
 	SourceType        string          `json:"source_type"` // "catalog" or "user_created"
 	CreatedByID       *uint           `json:"created_by_id,omitempty"`
 	CreatedBy         *User           `json:"created_by,omitempty"`

@@ -23,7 +23,12 @@ type ExerciseData struct {
 	Photos           []string `json:"photos"`
 }
 
-type ExerciseUnitData map[string]string
+type ExerciseExtensionData struct {
+	Unit       string `json:"unit"`
+	NeedWeight bool   `json:"needWeight"`
+}
+
+type ExerciseExtensionMap map[string]ExerciseExtensionData
 
 func LoadDataFromFile(db *gorm.DB) {
 	// Load main exercise data
@@ -38,17 +43,17 @@ func LoadDataFromFile(db *gorm.DB) {
 	var exercises []ExerciseData
 	json.Unmarshal(mainByteValue, &exercises)
 
-	// Load exercise units data
-	unitFile, err := os.Open("scripts/data/exercises_units.json")
+	// Load exercise extension data
+	extensionFile, err := os.Open("scripts/data/exercises_extensions.json")
 	if err != nil {
-		log.Fatalf("Failed to open units file: %v", err)
+		log.Fatalf("Failed to open extensions file: %v", err)
 	}
-	defer unitFile.Close()
+	defer extensionFile.Close()
 
-	unitByteValue, _ := io.ReadAll(unitFile)
+	extensionByteValue, _ := io.ReadAll(extensionFile)
 
-	var exerciseUnits ExerciseUnitData
-	json.Unmarshal(unitByteValue, &exerciseUnits)
+	var exerciseExtensions ExerciseExtensionMap
+	json.Unmarshal(extensionByteValue, &exerciseExtensions)
 
 	for _, exercise := range exercises {
 		// Handle Exercise Type
@@ -59,10 +64,13 @@ func LoadDataFromFile(db *gorm.DB) {
 		var difficulty models.Difficulty
 		db.FirstOrCreate(&difficulty, models.Difficulty{Level: exercise.Difficulty})
 
-		// Determine Unit
-		unit, exists := exerciseUnits[exercise.Name]
-		if !exists {
-			unit = "reps" // Default unit if not found in the units file
+		// Determine Unit and NeedWeight
+		extensionData, exists := exerciseExtensions[exercise.Name]
+		unit := "reps"        // Default unit
+		needWeight := false   // Default needWeight
+		if exists {
+			unit = extensionData.Unit
+			needWeight = extensionData.NeedWeight
 		}
 
 		// Create Exercise
@@ -71,6 +79,7 @@ func LoadDataFromFile(db *gorm.DB) {
 			Type:        exType,
 			Difficulty:  difficulty,
 			Unit:        unit,
+			NeedWeight:  needWeight,
 			SourceType:  "catalog",
 			CreatedByID: nil, // Since these exercises are from catalog, they are not user-created
 		}
