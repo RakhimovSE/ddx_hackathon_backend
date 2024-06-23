@@ -45,10 +45,11 @@ func SeedClientTrainingPlans(db *gorm.DB) {
 			endDate := time.Now().AddDate(0, 0, len(plan.Workouts)*2)
 
 			clientPlan := models.ClientTrainingPlan{
-				UserID:         client.ID,
-				TrainingPlanID: plan.ID,
 				Name:           plan.Name,
 				Description:    plan.Description,
+				CreatedByID: 	  *plan.CreatedByID,
+				UserID:         client.ID,
+				TrainingPlanID: plan.ID,
 				StartDate:      &startDate,
 				EndDate:        &endDate,
 			}
