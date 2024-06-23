@@ -35,7 +35,10 @@ func SeedClientTrainingPlans(db *gorm.DB) {
 			log.Fatalf("Failed to fetch training plans for trainers %v: %v", trainerIDs, err)
 		}
 
-		numPlans := rnd.Intn(min(3, len(trainingPlans))) + 1 // Each client will have 1-3 training plans
+		numPlans := rnd.Intn(3) + 1
+		if numPlans > len(trainingPlans) {
+			numPlans = len(trainingPlans)
+		}
 		selectedPlans := rnd.Perm(len(trainingPlans))[:numPlans]
 
 		for _, idx := range selectedPlans {
@@ -44,37 +47,26 @@ func SeedClientTrainingPlans(db *gorm.DB) {
 			plannedStartDate := time.Now().AddDate(0, 0, -rnd.Intn(11)-10)
 			plannedEndDate := plannedStartDate.AddDate(0, 0, rnd.Intn(16)+30)
 
-			var startDate, endDate *time.Time
-			randValue := rnd.Intn(3)
-
-			switch randValue {
-			case 0:
-				// No StartDate and EndDate
-				startDate = nil
-				endDate = nil
-			case 1:
-				// Only StartDate
-				sd := time.Now().AddDate(0, 0, -rnd.Intn(20)-1)
-				startDate = &sd
-				endDate = nil
-			case 2:
-				// Both StartDate and EndDate
-				sd := time.Now().AddDate(0, 0, -rnd.Intn(20)-1)
-				ed := sd.AddDate(0, 0, rnd.Intn(10)+20)
-				startDate = &sd
-				endDate = &ed
-			}
-
 			clientPlan := models.ClientTrainingPlan{
 				Name:             plan.Name,
 				Description:      plan.Description,
 				CreatedByID:      *plan.CreatedByID,
 				UserID:           client.ID,
 				TrainingPlanID:   plan.ID,
-				StartDate:        startDate,
-				EndDate:          endDate,
 				PlannedStartDate: &plannedStartDate,
 				PlannedEndDate:   &plannedEndDate,
+			}
+
+			// Determine if the training plan is started or completed
+			planStarted := rnd.Intn(2) == 0
+			planCompleted := planStarted && rnd.Intn(2) == 0
+			if planStarted {
+				startDate := plannedStartDate.AddDate(0, 0, rnd.Intn(5)-2)
+				clientPlan.StartDate = &startDate
+				if planCompleted {
+					endDate := startDate.AddDate(0, 0, rnd.Intn(16)+30)
+					clientPlan.EndDate = &endDate
+				}
 			}
 
 			if err := db.Create(&clientPlan).Error; err != nil {
@@ -86,23 +78,45 @@ func SeedClientTrainingPlans(db *gorm.DB) {
 				log.Fatalf("Failed to fetch workouts for plan %v: %v", plan.ID, err)
 			}
 
+			var prevClientWorkout *models.ClientWorkout
+
 			for workoutOrder, workout := range workouts {
-				startDate := time.Now().AddDate(0, 0, workoutOrder*2)
-				endDate := time.Now().AddDate(0, 0, (workoutOrder*2)+1)
+				var plannedStartDate time.Time
+				if prevClientWorkout != nil {
+					plannedStartDate = prevClientWorkout.PlannedStartDate.AddDate(0, 0, prevClientWorkout.DaysUntilNext)
+				} else {
+					plannedStartDate = *clientPlan.PlannedStartDate
+				}
+				plannedEndDate := plannedStartDate.Add(time.Hour)
 
 				clientWorkout := models.ClientWorkout{
 					ClientTrainingPlanID: clientPlan.ID,
 					WorkoutID:            workout.ID,
 					Name:                 workout.Name,
 					Description:          workout.Description,
-					StartDate:            &startDate,
-					EndDate:              &endDate,
+					DaysUntilNext:        workout.DaysUntilNext,
 					Order:                workoutOrder,
+					PlannedStartDate:     &plannedStartDate,
+					PlannedEndDate:       &plannedEndDate,
+				}
+
+				// Determine if the workout is started or completed
+				workoutStarted := planStarted && rnd.Intn(2) == 0
+				workoutCompleted := workoutStarted && rnd.Intn(2) == 0
+				if workoutStarted {
+					startDate := plannedStartDate.AddDate(0, 0, rnd.Intn(5)-2)
+					clientWorkout.StartDate = &startDate
+					if workoutCompleted {
+						endDate := startDate.Add(time.Duration(rnd.Intn(31)+50) * time.Minute)
+						clientWorkout.EndDate = &endDate
+					}
 				}
 
 				if err := db.Create(&clientWorkout).Error; err != nil {
 					log.Fatalf("Failed to create client workout for client plan %v: %v", clientPlan.ID, err)
 				}
+
+				prevClientWorkout = &clientWorkout
 
 				var workoutExercises []models.WorkoutExercise
 				if err := db.Where("workout_id = ?", workout.ID).Order("id").Find(&workoutExercises).Error; err != nil {

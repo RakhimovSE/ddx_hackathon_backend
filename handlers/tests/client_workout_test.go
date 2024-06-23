@@ -47,6 +47,8 @@ func TestGetClientWorkouts(t *testing.T) {
 		Order:                1,
 		StartDate:            timePtr(time.Now().AddDate(0, 0, 1)),
 		EndDate:              timePtr(time.Now().AddDate(0, 0, 1).Add(time.Hour)),
+		PlannedStartDate:     timePtr(time.Now().AddDate(0, 0, 1)),
+		PlannedEndDate:       timePtr(time.Now().AddDate(0, 0, 1).Add(time.Hour)),
 	}
 	db.Create(&clientWorkout1)
 
@@ -58,6 +60,8 @@ func TestGetClientWorkouts(t *testing.T) {
 		Order:                2,
 		StartDate:            timePtr(time.Now().AddDate(0, 0, -1)),
 		EndDate:              timePtr(time.Now().AddDate(0, 0, -1).Add(time.Hour)),
+		PlannedStartDate:     timePtr(time.Now().AddDate(0, 0, -1)),
+		PlannedEndDate:       timePtr(time.Now().AddDate(0, 0, -1).Add(time.Hour)),
 	}
 	db.Create(&clientWorkout2)
 

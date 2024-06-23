@@ -25,17 +25,17 @@ func GetClientWorkouts(c *gin.Context, db *gorm.DB) {
 			c.JSON(http.StatusBadRequest, gin.H{"error": "Invalid date format"})
 			return
 		}
-		query = query.Where("client_workouts.start_date >= ? AND client_workouts.start_date < ?", date, date.AddDate(0, 0, 1))
+		query = query.Where("client_workouts.planned_start_date >= ? AND client_workouts.planned_start_date < ?", date, date.AddDate(0, 0, 1))
 	}
 
 	switch status {
 	case "upcoming":
-		query = query.Where("client_workouts.start_date >= ?", time.Now())
+		query = query.Where("client_workouts.planned_start_date >= ?", time.Now())
 	case "past":
-		query = query.Where("client_workouts.start_date < ?", time.Now())
+		query = query.Where("client_workouts.planned_end_date < ?", time.Now())
 	}
 
-	query = query.Order("client_workouts.start_date").Find(&workouts)
+	query = query.Order("client_workouts.planned_start_date").Find(&workouts)
 	if query.Error != nil {
 		c.JSON(http.StatusInternalServerError, gin.H{"error": "Failed to fetch workouts"})
 		return

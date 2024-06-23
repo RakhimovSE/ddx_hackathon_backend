@@ -55,12 +55,13 @@ func TestGetClientExerciseSets(t *testing.T) {
 
 	assert.Equal(t, http.StatusOK, w.Code)
 
-	var response []models.ClientExerciseSet
+	var response []models.ClientWorkoutExercise
 	err := json.Unmarshal(w.Body.Bytes(), &response)
 	assert.Nil(t, err)
 
 	// Check the response
-	assert.Len(t, response, 2)
-	assert.Equal(t, clientExerciseSet1.ID, response[0].ID)
-	assert.Equal(t, clientExerciseSet2.ID, response[1].ID)
+	assert.Len(t, response, 1)
+	assert.Len(t, response[0].Sets, 2)
+	assert.Equal(t, clientExerciseSet1.ID, response[0].Sets[0].ID)
+	assert.Equal(t, clientExerciseSet2.ID, response[0].Sets[1].ID)
 }
