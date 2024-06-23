@@ -19,10 +19,21 @@ func GetClientWorkoutExercises(c *gin.Context, db *gorm.DB) {
 	}
 
 	var clientWorkoutExercises []models.ClientWorkoutExercise
-	if err := db.Where("client_workout_id = ?", clientWorkoutID).Order("order").Preload("Sets").Find(&clientWorkoutExercises).Error; err != nil {
+	if err := db.Where("client_workout_id = ?", clientWorkoutID).
+		Order("order").
+		Preload("Sets").
+		Preload("Exercise").
+		Preload("Exercise.Photos").
+		Preload("Exercise.Muscles").
+		Preload("Exercise.AdditionalMuscles").
+		Preload("Exercise.Equipments").
+		Preload("Exercise.Type").
+		Preload("Exercise.Difficulty").
+		Find(&clientWorkoutExercises).Error; err != nil {
 		c.JSON(http.StatusInternalServerError, gin.H{"error": "Failed to fetch client workout exercises"})
 		return
 	}
 
 	c.JSON(http.StatusOK, clientWorkoutExercises)
 }
+

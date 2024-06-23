@@ -5,10 +5,8 @@ import (
 	"fmt"
 	"io"
 	"log"
-	"math/rand"
 	"os"
 	"strings"
-	"time"
 
 	"ddx_hackathon_backend/models"
 
@@ -25,19 +23,32 @@ type ExerciseData struct {
 	Photos           []string `json:"photos"`
 }
 
-func LoadDataFromFile(db *gorm.DB) {
-	file, err := os.Open("scripts/data/main_images.json")
-	if err != nil {
-		log.Fatalf("Failed to open file: %v", err)
-	}
-	defer file.Close()
+type ExerciseUnitData map[string]string
 
-	byteValue, _ := io.ReadAll(file)
+func LoadDataFromFile(db *gorm.DB) {
+	// Load main exercise data
+	mainFile, err := os.Open("scripts/data/main_images.json")
+	if err != nil {
+		log.Fatalf("Failed to open main file: %v", err)
+	}
+	defer mainFile.Close()
+
+	mainByteValue, _ := io.ReadAll(mainFile)
 
 	var exercises []ExerciseData
-	json.Unmarshal(byteValue, &exercises)
+	json.Unmarshal(mainByteValue, &exercises)
 
-	rnd := rand.New(rand.NewSource(time.Now().UnixNano()))
+	// Load exercise units data
+	unitFile, err := os.Open("scripts/data/exercises_units.json")
+	if err != nil {
+		log.Fatalf("Failed to open units file: %v", err)
+	}
+	defer unitFile.Close()
+
+	unitByteValue, _ := io.ReadAll(unitFile)
+
+	var exerciseUnits ExerciseUnitData
+	json.Unmarshal(unitByteValue, &exerciseUnits)
 
 	for _, exercise := range exercises {
 		// Handle Exercise Type
@@ -49,9 +60,9 @@ func LoadDataFromFile(db *gorm.DB) {
 		db.FirstOrCreate(&difficulty, models.Difficulty{Level: exercise.Difficulty})
 
 		// Determine Unit
-		unit := "reps"
-		if rnd.Float64() < 0.2 {
-			unit = "duration"
+		unit, exists := exerciseUnits[exercise.Name]
+		if !exists {
+			unit = "reps" // Default unit if not found in the units file
 		}
 
 		// Create Exercise
