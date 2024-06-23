@@ -91,3 +91,22 @@ func GetClientTrainingPlans(c *gin.Context, db *gorm.DB) {
 
 	c.JSON(http.StatusOK, clientTrainingPlans)
 }
+
+func GetClientExerciseSets(c *gin.Context, db *gorm.DB) {
+	clientID := c.Param("client_id")
+	exerciseID := c.Param("exercise_id")
+
+	var clientExerciseSets []models.ClientExerciseSet
+
+	if err := db.Joins("JOIN client_workout_exercises ON client_workout_exercises.id = client_exercise_sets.client_workout_exercise_id").
+		Joins("JOIN client_workouts ON client_workouts.id = client_workout_exercises.client_workout_id").
+		Joins("JOIN client_training_plans ON client_training_plans.id = client_workouts.client_training_plan_id").
+		Where("client_training_plans.user_id = ? AND client_workout_exercises.exercise_id = ?", clientID, exerciseID).
+		Order("client_exercise_sets.start_date DESC").
+		Find(&clientExerciseSets).Error; err != nil {
+		c.JSON(http.StatusInternalServerError, gin.H{"error": "Failed to fetch client exercise sets"})
+		return
+	}
+
+	c.JSON(http.StatusOK, clientExerciseSets)
+}
