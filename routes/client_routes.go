@@ -21,6 +21,6 @@ func setupClientRoutes(router *gin.Engine, db *gorm.DB) {
 		handlers.GetClientTrainingPlans(c, db)
 	})
 	router.GET("/clients/:client_id/exercise_sets/:exercise_id", func(c *gin.Context) {
-		handlers.GetClientExerciseSets(c, db)
+		handlers.GetClientCompletedExercises(c, db)
 	})
 }
