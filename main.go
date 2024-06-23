@@ -13,17 +13,17 @@ import (
 
 func loadEnv() {
   env := os.Getenv("GIN_MODE")
-  if env == "release" {
-    err := godotenv.Load(".env.release")
-    if err != nil {
-      log.Fatalf("Error loading .env.release file")
-    }
-  } else {
-    err := godotenv.Load(".env.debug")
-    if err != nil {
-      log.Fatalf("Error loading .env.debug file")
-    }
-  }
+	if env == "release" {
+		err := godotenv.Load(".env.release")
+		if err != nil {
+			log.Fatalf("Error loading .env.release file")
+		}
+	} else {
+		err := godotenv.Load(".env.debug")
+		if err != nil {
+			log.Fatalf("Error loading .env.debug file")
+		}
+	}
 }
 
 func main() {
@@ -58,6 +58,9 @@ func main() {
 			return
 		case "seed_client_training_plans":
 			scripts.SeedClientTrainingPlans(db)
+			return
+		case "reset_db":
+			scripts.ResetDatabase(db)
 			return
 		}
 	}
