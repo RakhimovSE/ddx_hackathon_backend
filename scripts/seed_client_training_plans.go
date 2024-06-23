@@ -35,23 +35,46 @@ func SeedClientTrainingPlans(db *gorm.DB) {
 			log.Fatalf("Failed to fetch training plans for trainers %v: %v", trainerIDs, err)
 		}
 
-		numPlans := rnd.Intn(len(trainingPlans) + 1)
+		numPlans := rnd.Intn(min(3, len(trainingPlans))) + 1 // Each client will have 1-3 training plans
 		selectedPlans := rnd.Perm(len(trainingPlans))[:numPlans]
 
 		for _, idx := range selectedPlans {
 			plan := trainingPlans[idx]
 
-			startDate := time.Now()
-			endDate := time.Now().AddDate(0, 0, len(plan.Workouts)*2)
+			plannedStartDate := time.Now().AddDate(0, 0, -rnd.Intn(11)-10)
+			plannedEndDate := plannedStartDate.AddDate(0, 0, rnd.Intn(16)+30)
+
+			var startDate, endDate *time.Time
+			randValue := rnd.Intn(3)
+
+			switch randValue {
+			case 0:
+				// No StartDate and EndDate
+				startDate = nil
+				endDate = nil
+			case 1:
+				// Only StartDate
+				sd := time.Now().AddDate(0, 0, -rnd.Intn(20)-1)
+				startDate = &sd
+				endDate = nil
+			case 2:
+				// Both StartDate and EndDate
+				sd := time.Now().AddDate(0, 0, -rnd.Intn(20)-1)
+				ed := sd.AddDate(0, 0, rnd.Intn(10)+20)
+				startDate = &sd
+				endDate = &ed
+			}
 
 			clientPlan := models.ClientTrainingPlan{
-				Name:           plan.Name,
-				Description:    plan.Description,
-				CreatedByID: 	  *plan.CreatedByID,
-				UserID:         client.ID,
-				TrainingPlanID: plan.ID,
-				StartDate:      &startDate,
-				EndDate:        &endDate,
+				Name:             plan.Name,
+				Description:      plan.Description,
+				CreatedByID:      *plan.CreatedByID,
+				UserID:           client.ID,
+				TrainingPlanID:   plan.ID,
+				StartDate:        startDate,
+				EndDate:          endDate,
+				PlannedStartDate: &plannedStartDate,
+				PlannedEndDate:   &plannedEndDate,
 			}
 
 			if err := db.Create(&clientPlan).Error; err != nil {
@@ -88,10 +111,10 @@ func SeedClientTrainingPlans(db *gorm.DB) {
 
 				for exerciseOrder, workoutExercise := range workoutExercises {
 					clientWorkoutExercise := models.ClientWorkoutExercise{
-						ClientWorkoutID:   clientWorkout.ID,
-						ExerciseID: 		   workoutExercise.ExerciseID,
-						RestTime:          workoutExercise.RestTime,
-						Order:             exerciseOrder,
+						ClientWorkoutID: clientWorkout.ID,
+						ExerciseID:      workoutExercise.ExerciseID,
+						RestTime:        workoutExercise.RestTime,
+						Order:           exerciseOrder,
 					}
 
 					if err := db.Create(&clientWorkoutExercise).Error; err != nil {
