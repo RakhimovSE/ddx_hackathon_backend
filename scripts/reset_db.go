@@ -2,6 +2,7 @@ package scripts
 
 import (
 	"ddx_hackathon_backend/database"
+	"fmt"
 
 	"github.com/jinzhu/gorm"
 )
@@ -29,4 +30,6 @@ func ResetDatabase(db *gorm.DB) {
 	db.Exec("DROP TABLE IF EXISTS users CASCADE")
 
 	database.MigrateDB(db)
+
+	fmt.Println("Database reset successfully")
 }
