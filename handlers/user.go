@@ -43,29 +43,29 @@ func CreateUser(c *gin.Context, db *gorm.DB) {
 }
 
 func LoginUser(c *gin.Context, db *gorm.DB) {
-    var input struct {
-        Email    string `json:"email"`
-        Password string `json:"password"`
-    }
-    if err := c.ShouldBindJSON(&input); err != nil {
-        c.JSON(http.StatusBadRequest, gin.H{"error": "Invalid input"})
-        return
-    }
-
-    var user models.User
-    if err := db.Where("email = ?", input.Email).First(&user).Error; err != nil {
-        c.JSON(http.StatusUnauthorized, gin.H{"error": "Invalid email or password"})
-        return
-    }
-
-    // Проверка пароля
-    err := bcrypt.CompareHashAndPassword([]byte(user.Password), []byte(input.Password))
-    if err != nil {
-        c.JSON(http.StatusUnauthorized, gin.H{"error": "Invalid email or password"})
-        return
-    }
-
-    c.JSON(http.StatusOK, user)
+	var input struct {
+			Email    string `json:"email"`
+			Password string `json:"password"`
+	}
+	if err := c.ShouldBindJSON(&input); err != nil {
+			c.JSON(http.StatusBadRequest, gin.H{"error": "Invalid input"})
+			return
+	}
+	
+	var user models.User
+	if err := db.Preload("TrainerProfile.Specialties").Where("email = ?", input.Email).First(&user).Error; err != nil {
+			c.JSON(http.StatusUnauthorized, gin.H{"error": "Invalid email or password"})
+			return
+	}
+	
+	// Проверка пароля
+	err := bcrypt.CompareHashAndPassword([]byte(user.Password), []byte(input.Password))
+	if err != nil {
+			c.JSON(http.StatusUnauthorized, gin.H{"error": "Invalid email or password"})
+			return
+	}
+	
+	c.JSON(http.StatusOK, user)
 }
 
 func GetUsers(c *gin.Context, db *gorm.DB) {
