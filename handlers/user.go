@@ -127,10 +127,12 @@ func UpdateUser(c *gin.Context, db *gorm.DB) {
 }
 
 func GetUserTrainingPlans(c *gin.Context, db *gorm.DB) {
-	var trainingPlans []models.TrainingPlan
 	userId := c.Param("id")
 
-	if err := db.Where("created_by_id = ?", userId).Preload("Workouts").Find(&trainingPlans).Error; err != nil {
+	var trainingPlans []models.TrainingPlan
+	if err := db.Preload("CreatedBy").
+		Where("created_by_id = ? AND deleted_at IS NULL", userId).
+		Find(&trainingPlans).Error; err != nil {
 		c.JSON(http.StatusInternalServerError, gin.H{"error": "Failed to fetch training plans"})
 		return
 	}
