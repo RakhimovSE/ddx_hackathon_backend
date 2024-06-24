@@ -23,4 +23,7 @@ func setupUserRoutes(router *gin.Engine, db *gorm.DB) {
 	router.POST("/login", func(c *gin.Context) {
 		handlers.LoginUser(c, db)
 	})
+	router.GET("/users/:id/training_plans", func(c *gin.Context) {
+		handlers.GetUserTrainingPlans(c, db)
+	})
 }
