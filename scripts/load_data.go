@@ -104,6 +104,9 @@ func LoadDataFromFile(db *gorm.DB) {
 		// Handle Equipments
 		equipments := strings.Split(exercise.Equipment, ",")
 		for _, equipmentName := range equipments {
+			if strings.TrimSpace(equipmentName) == "Отсутствует" {
+				equipmentName = "Без оборудования"
+			}
 			var equipment models.Equipment
 			db.FirstOrCreate(&equipment, models.Equipment{Name: strings.TrimSpace(equipmentName)})
 			db.Model(&ex).Association("Equipments").Append(&equipment)
