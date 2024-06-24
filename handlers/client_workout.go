@@ -49,7 +49,7 @@ func GetWorkoutsByTrainingPlan(c *gin.Context, db *gorm.DB) {
 
 	var workouts []models.ClientWorkout
 	query := db.Where("client_training_plan_id = ?", trainingPlanID).
-		Order("start_date").
+		Order("planned_start_date").
 		Find(&workouts)
 
 	if query.Error != nil {
